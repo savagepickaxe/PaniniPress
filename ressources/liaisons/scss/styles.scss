@@ -1,0 +1,84 @@
+@charset "UTF-8";
+
+/**
+ * @author Laurie Roy
+ * @todo Lier les modules avec des instructions @import
+ * @todo Compléter selon l'énoncé de l'exercice
+ */
+
+/*
+ * ------------------
+ * TABLE DES MATIERES
+ * ------------------
+ * Librairies
+ ** Normalize
+ * UTILITAIRES
+ ** Variables
+ ** Mixins
+ * BASE
+ ** Typographie
+ ** Hyperliens
+ ** Boutons
+ * MODULES
+ ** gds - Styles généraux du Guide de styles
+ ** palette - Palette de couleurs
+ ** listeInteractivite - Éléments interactifs
+ */
+
+/****** Librairies ******/
+
+/** Normalize **/
+@import '../../../node_modules/normalize.scss/normalize.scss';
+
+/**** UTILITAIRES ****/
+
+/** Variables **/
+@import 'utilitaires/variables';
+
+/** Mixins **/
+@import 'utilitaires/mixins';
+
+/****** BASE ******/
+
+/** Typographie **/
+@import 'base/typo';
+
+/** Hyperliens **/
+@import 'base/hyperlien';
+
+/** Boutons **/
+@import 'base/bouton';
+
+/****** LAYOUT ******/
+/** Styles généraux de mise en page**/
+@import 'layout/general';
+
+/** Mandat A - Accueil **/
+@import 'layout/accueil';
+
+/** Mandat B - Réalisations **/
+@import 'layout/realisations';
+
+/** Mandat C - Équipe **/
+@import 'layout/equipe';
+
+/** Mandat D - Services **/
+@import 'layout/services';
+
+
+/****** MODULES ******/
+/** entête de page **/
+@import 'layout/entete';
+/** navigation **/
+// @import 'modules/navigation';
+/** pied de page **/
+@import 'layout/piedpage';
+/** article WP **/
+@import 'modules/article';
+/** MenuWP **/
+@import 'modules/menuwp';
+
+/** barres latérales  optionnelles**/
+//@import 'modules/barredroite';
+//@import 'modules/barregauche';
+
