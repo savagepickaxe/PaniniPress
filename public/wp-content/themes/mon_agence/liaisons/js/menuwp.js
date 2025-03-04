@@ -10,8 +10,8 @@
 //*******************
 
 var menu = {
-  lblMenuFerme: 'Menu',
-  lblMenuOuvert: 'Fermer',
+  lblMenuFerme: '☰',
+  lblMenuOuvert: '×',
   refBouton: null,
   refLibelle: null,
   refMenu: null,

@@ -16,11 +16,11 @@
 <body>
     <header class="entete">
      <?php if (has_custom_logo()){ ?>
-        <div class="logo"><?php the_custom_logo(); ?></div>
+        <div class="entete__logo"><?php the_custom_logo(); ?></div>
         <?php } ?>
         
         <?php if (has_nav_menu ("principal")){ ?>
-            <nav id="principal" class="menu__principal">
+            <nav id="principal" class="menu__principal entete__menu">
                 <?php wp_nav_menu(array("theme_location"=>"principal"));?>
             </nav>
         <?php } ?>
