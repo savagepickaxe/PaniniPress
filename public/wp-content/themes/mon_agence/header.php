@@ -15,10 +15,9 @@
 </head>
 <body>
     <header class="entete">
-        <h1 class="entete__titre">
-            <a href="<?php bloginfo("url");?>" titre="<?php bloginfo("name");?>"><?php bloginfo("name");?></a>
-        </h1>
-        <h2 class="entete__slogan"><?php bloginfo("description");?></h2>
+     <?php if (has_custom_logo()){ ?>
+        <div class="logo"><?php the_custom_logo(); ?></div>
+        <?php } ?>
         
         <?php if (has_nav_menu ("principal")){ ?>
             <nav id="principal" class="menu__principal">
