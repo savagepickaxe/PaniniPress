@@ -648,12 +648,20 @@ body {
   flex-direction: row;
   background-color: #82A583;
   align-items: center;
+  padding: 20px 20px 0px 20px;
 }
 .entete__menu {
   width: 50%;
 }
+@media (min-width: 768px) {
+  .entete__menu {
+    margin-top: auto;
+    padding-bottom: 20px;
+  }
+}
 .entete__logo {
   z-index: 100;
+  margin-bottom: -20px;
 }
 .entete__logoimg {
   z-index: 100;
@@ -665,11 +673,13 @@ body {
 /** pied de page **/
 /*pied de page*/
 .piedDePage {
-  max-width: 960px;
+  padding: 0px 20% 0px 20%;
   margin: 0 auto;
-  background-color: #eee;
+  background-color: #82A583;
   border-top: 1px solid #333;
   clear: both;
+  display: flex;
+  justify-content: space-between;
 }
 .piedDePage h2 {
   margin: 0;
@@ -733,6 +743,11 @@ body {
   /*     outline: none;
        border-left: 5px solid #f5ae09;*/
 }
+@media (min-width: 601px) {
+  .menu-item a {
+    font-size: clamp(2rem, 2vw, 3rem);
+  }
+}
 .menu-item a:link, .menu-item a:visited {
   text-decoration: none;
   color: inherit;
@@ -760,15 +775,15 @@ body {
   max-height: 100vh;
   overflow: hidden;
   transition: max-height 0.5s;
+  display: flex;
+  gap: 30px;
 }
 @media (max-width: 768px) {
   .js .menu {
     position: absolute;
     font-size: clamp(4rem, 2vw, 5rem);
     text-align: end;
-    display: flex;
     flex-direction: column;
-    gap: 30px;
     background-color: #82A583;
     width: 100%;
     right: 0;

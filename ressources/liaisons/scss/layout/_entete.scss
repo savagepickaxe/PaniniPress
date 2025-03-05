@@ -4,15 +4,19 @@
   flex-direction:row;
   background-color:#82A583 ;
   align-items: center;
+  padding: 20px 20px 0px 20px;
  &__menu{
   width: 50%;
- }
-  @media(min-width: 768px){
-    
+ @media(min-width: 768px){
+    margin-top:auto;
+    padding-bottom: 20px;
   }
+ }
+ 
   
   &__logo{
-z-index: 100;;
+z-index: 100;
+margin-bottom:-20px;
   &img{
     z-index: 100;
     width: 100%;

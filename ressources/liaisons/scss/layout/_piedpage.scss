@@ -1,10 +1,12 @@
 /*pied de page*/
 .piedDePage{
-  max-width: 960px;
+ padding: 0px 20% 0px 20%;
   margin: 0 auto;
-  background-color: #eee;
+  background-color: #82A583;
   border-top: 1px solid #333;
   clear: both;
+  display: flex;
+  justify-content: space-between;
   h2{
     margin: 0;
     padding: 10px;

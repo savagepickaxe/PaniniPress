@@ -46,6 +46,9 @@
     display: block;
     padding: 5px 10px;
     width: 100%;
+    @media (min-width: 601px) {
+       font-size: clamp(2rem, 2vw, 3rem);
+    }
 
     &:link, &:visited {
         text-decoration: none;
@@ -92,14 +95,15 @@
     max-height: 100vh;
     overflow: hidden;
     transition: max-height 0.5s;
-
+    display: flex;
+         gap: 30px;
     @media(max-width:768px){
         position: absolute;
         font-size: clamp(4rem, 2vw, 5rem);
         text-align: end;
-        display: flex;
+    
         flex-direction: column;
-        gap: 30px;
+   
         background-color: #82A583;
         width: 100%;
        
@@ -109,6 +113,7 @@
         transition: max-height 0.5s;
         color: white;
     }
+   
 }
 
 .js .navigation--ferme .menu {
