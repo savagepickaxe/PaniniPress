@@ -28,60 +28,60 @@
 /****** Librairies ******/
 
 /** Normalize **/
-@import '../../../node_modules/normalize.scss/normalize.scss';
+@import "../../../node_modules/normalize.scss/normalize.scss";
 
 /**** UTILITAIRES ****/
 
 /** Variables **/
-@import 'utilitaires/variables';
+@import "utilitaires/variables";
 
 /** Mixins **/
-@import 'utilitaires/mixins';
+@import "utilitaires/mixins";
 
 /****** BASE ******/
 
 /** Typographie **/
-@import 'base/typo';
+@import "base/typo";
 
 /** Hyperliens **/
-@import 'base/hyperlien';
+@import "base/hyperlien";
 
 /** Boutons **/
-@import 'base/bouton';
+@import "base/bouton";
 
 /****** LAYOUT ******/
 /** Styles généraux de mise en page**/
-@import 'layout/general';
+@import "layout/general";
 
 /** Mandat A - Accueil **/
-@import 'layout/accueil';
+@import "layout/accueil";
 
 /** Mandat B - Réalisations **/
-@import 'layout/realisations';
+@import "layout/realisations";
 
 /** Mandat C - Équipe **/
-@import 'layout/equipe';
+@import "layout/equipe";
 
 /** Mandat D - Services **/
-@import 'layout/services';
-
+@import "layout/services";
 
 /****** MODULES ******/
 /** entête de page **/
-@import 'layout/entete';
+@import "layout/entete";
 /** navigation **/
 // @import 'modules/navigation';
 /** pied de page **/
-@import 'layout/piedpage';
+@import "layout/piedpage";
 /** article WP **/
-@import 'modules/article';
+@import "modules/article";
 /** MenuWP **/
-@import 'modules/menuwp';
-/** Carousel **/
-@import 'modules/carousel';
+@import "modules/menuwp";
 
+/** Carousel **/
+@import "modules/carousel";
+
+/** Navigation latérale **/
 
 /** barres latérales  optionnelles**/
 //@import 'modules/barredroite';
 //@import 'modules/barregauche';
-
