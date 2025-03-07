@@ -35,7 +35,7 @@
 /* pour décoller les blocs du viewport, à gauche et à droite.
 Ajuster selon le besoin  */
 .conteneur {
-    padding: 0 0.5em;
+   
 }
 
 /**** Requêtes media ****/
@@ -43,7 +43,7 @@ Ajuster selon le besoin  */
 @media (min-width: 600px) {
     .conteneur {
         margin: 0 auto;
-        max-width: 1000px;
+      
         padding: 0;
         /* Grille 12 colonnes en arrière-plan - Mettre en commentaires après usage */
         /*background-image: linear-gradient(to right, rgba(102, 102, 255, 0.25), rgba(179, 179, 255, 0.25) 83.33333%, transparent 83.33333%);

@@ -1,0 +1,9 @@
+.page{
+    background-color: #FFF8DE;
+}
+.article{
+    display: flex;
+}
+.article:first-child{
+    flex-direction: row-reverse;
+}

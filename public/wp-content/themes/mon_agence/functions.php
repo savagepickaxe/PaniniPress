@@ -1,4 +1,13 @@
 <?php
+function theme_footer (){
+    register_sidebar( array(
+    'name' => 'Pied de page',
+    'id' => 'footer',
+    'description' => 'Zone de widget pour le pied de page',
+    'before_widget' => '<div class="footer-widget">',
+    'after_widget' => '</div>',) );
+}
+add_action('widgets_init', 'theme_footer');
 add_theme_support( 'custom-logo' );
 
 function themename_custom_logo_setup() {

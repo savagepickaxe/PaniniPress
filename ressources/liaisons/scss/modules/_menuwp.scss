@@ -20,50 +20,46 @@
     max-width: 960px;
     margin: 0 auto;
     &__controle {
-        background-color: #d9d7d0;
+       background: transparent;
         border: none;
         padding: 10px;
         min-width: 40px;
-        &:hover{
-            background-color: #f5ae09;
-        }
-        &:active{
-            background-color: #f1acb1;
-        }
+        margin-left:auto;
+        display: flex;
+       
         &:focus{
-            /**
-             * Les styles du navigateur utilisent la règle outline pour définir
-             * l'état focus des éléments interactifs.
-             * Vous pouvez redéfinir cette règle ou remplacer par d'autres styles
-             * mieux adaptés à la direction visuelle.
-             * MAIS il faut souligner l'état focus et le tester au clavier.
-             */
-            outline-offset: -5px;
-            outline: #f5ae09 auto 5px;
+          
         }
         @media (min-width: 601px) {
             display: none;
         }
     }
+    &__libelle{
+        color: white;
+        font-size: clamp(7.5rem, 4vw, 8rem);
+    }
 }
 
 /* Liens du menu */
 .menu-item a {
-    background-color: #d9d7d0;
+  
     display: block;
     padding: 5px 10px;
     width: 100%;
+    @media (min-width: 601px) {
+       font-size: clamp(2rem, 2vw, 3rem);
+    }
 
     &:link, &:visited {
         text-decoration: none;
         color: inherit;
     }
     &:active, &:hover {
-        background-color: #f5ae09;
+       
     }
 
     &--actif {
-        border-left: 5px solid #f4d07c;
+       
     }
     // &:focus {
     /*     outline: none;
@@ -99,10 +95,31 @@
     max-height: 100vh;
     overflow: hidden;
     transition: max-height 0.5s;
+    display: flex;
+         gap: 30px;
+    @media(max-width:768px){
+        position: absolute;
+        font-size: clamp(4rem, 2vw, 5rem);
+        text-align: end;
+    
+        flex-direction: column;
+   
+        background-color: #82A583;
+        width: 100%;
+       
+        right: 0;
+        z-index: 0;
+      height: 100vh;
+        transition: max-height 0.5s;
+        color: white;
+    }
+   
 }
 
 .js .navigation--ferme .menu {
     max-height: 0;
+    color: white;
+ 
     @media (min-width: 601px) {
         max-height: none;
     }
