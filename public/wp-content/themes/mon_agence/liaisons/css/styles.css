@@ -637,6 +637,18 @@ body {
 }
 
 /** Mandat A - Accueil **/
+.page {
+  background-color: #FFF8DE;
+}
+
+.article {
+  display: flex;
+}
+
+.article:first-child {
+  flex-direction: row-reverse;
+}
+
 /** Mandat B - Réalisations **/
 /** Mandat C - Équipe **/
 /** Mandat D - Services **/
@@ -757,14 +769,9 @@ body {
 
 /** article WP **/
 .article {
-  border-bottom: 1px dotted #333;
   padding-right: 8px;
   margin-bottom: 10px;
 }
-.article__entete {
-  background-color: #eee;
-}
-
 /** MenuWP **/
 /**
  * @author Prénom Nom courriel
