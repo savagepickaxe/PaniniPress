@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/liaisons/css/styles.css?v=<?php echo rand(0,10000); ?>">
     <?php wp_head(); ?>
 </head>
-<body>
+<body <?php body_class(); ?>>
     <header class="entete">
      <?php if (has_custom_logo()){ ?>
         <div class="entete__logo"><?php the_custom_logo(); ?></div>
