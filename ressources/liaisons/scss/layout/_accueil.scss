@@ -83,3 +83,110 @@
     object-fit: fill;
 }
 }
+
+//realisations
+.realisations{
+    height: 60vh;
+    gap: 2rem;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    overflow: hidden;
+ 
+    &__wrapper{
+  display:flex;
+  height: 100%;
+&__container{
+    position: relative;
+   min-width:100%;
+  
+    
+
+    &__image{
+        position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.4s ease-in-out;
+padding: 50px;
+
+        @media (min-width: 768px){
+        width: 50%;
+        }
+       & img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 18px;
+       }
+    }
+    &__article{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.4s ease-in-out;
+        z-index: 1;
+    opacity: 0; 
+  
+    color: white; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    border-radius: 18px;
+    text-align: center;
+        @media (min-width: 768px){
+        width: 50%;
+        }
+        &__contenu{
+            background-color: white;
+            border: 1px solid black;
+            border-radius: 18px;
+            height: 100%;
+            padding: 25px 20px 0px 20px;
+            &__lien{
+                color: black;
+                text-decoration: none;
+            }
+            & p{
+                color: black;
+                font-size: clamp(16px, 2vw, 20px);
+            }
+
+
+
+        }
+    }
+}
+    }
+}
+
+
+// swiper
+@media (min-width:768px){
+.swiper-button-next, .swiper-button-prev {
+    color: white; /* Change la couleur */
+    background: rgba(0, 0, 0, 0.5); /* Ajoute un fond semi-transparent */
+    padding: 10px;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.swiper-button-next:hover, .swiper-button-prev:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+/* Ajuste la taille des flèches */
+.swiper-button-next::after, .swiper-button-prev::after {
+    font-size: 20px;
+}
+}
+.eye-button{
+    z-index: 1000;
+  position: absolute;
+  top: 70px;
+    right: 70px;
+}

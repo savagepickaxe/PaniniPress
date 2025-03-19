@@ -13,10 +13,16 @@
   font-family: Futura, sans-serif;
   src: 	url('../fonts/Futura.ttc') format('truetype');
 }
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=DM+Serif+Text:ital@0;1&family=Judson:ital,wght@0,400;0,700;1,400&display=swap');
 
-$fontePrimaire : Futura, sans-serif;
-$fonteSecondaire : Arial, sans-serif;
-
+$fontePrimaire : "Judson", serif;
+$fonteSecondaire :'Abel', sans-serif;
+.menu-item a{
+  
+  font-family: "DM Serif Text", serif;
+  font-weight: 400;
+  font-style: normal;
+}
 /** Palette de couleurs **/
 // Utiliser http://chir.ag/projects/name-that-color pour obtenir des noms uniques et mémorisables
 // Permettez-vous d'utiliser un nom de variable plus explicite si la suggestion de name-that-color est trop étrange

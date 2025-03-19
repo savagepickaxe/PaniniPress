@@ -30,6 +30,7 @@
  * 2. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
  */
+@import url("https://fonts.googleapis.com/css2?family=Abel&family=DM+Serif+Text:ital@0;1&family=Judson:ital,wght@0,400;0,700;1,400&display=swap");
 html {
   font-family: sans-serif; /* 1 */
   -ms-text-size-adjust: 100%; /* 2 */
@@ -421,6 +422,12 @@ th {
   font-family: Futura, sans-serif;
   src: url("../fonts/Futura.ttc") format("truetype");
 }
+.menu-item a {
+  font-family: "DM Serif Text", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 /** Palette de couleurs **/
 /* Couleurs de base */
 /* Autres couleurs */
@@ -481,7 +488,7 @@ html {
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Abel", sans-serif;
   font-size: 16px;
   font-size: 1.6pxrem;
   line-height: 1.375; /* facteur multiplicateur de la taille de la police 1.375x16=22 */
@@ -492,7 +499,7 @@ h2,
 .titreNiveau2,
 h3,
 .titreNiveau3 {
-  font-family: Futura, sans-serif;
+  font-family: "Judson", serif;
   font-weight: 500;
 }
 
@@ -545,7 +552,7 @@ h3--desktop,
 }
 
 .texte {
-  font-family: Arial, sans-serif;
+  font-family: "Abel", sans-serif;
   font-size: 16px;
   font-size: 1.6pxrem;
   line-height: 1.375;
@@ -725,6 +732,103 @@ body {
   width: 100%;
   height: 100%;
   object-fit: fill;
+}
+
+.realisations {
+  height: 60vh;
+  gap: 2rem;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.realisations__wrapper {
+  display: flex;
+  height: 100%;
+}
+.realisations__wrapper__container {
+  position: relative;
+  min-width: 100%;
+}
+.realisations__wrapper__container__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.4s ease-in-out;
+  padding: 50px;
+}
+@media (min-width: 768px) {
+  .realisations__wrapper__container__image {
+    width: 50%;
+  }
+}
+.realisations__wrapper__container__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 18px;
+}
+.realisations__wrapper__container__article {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.4s ease-in-out;
+  z-index: 1;
+  opacity: 0;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  border-radius: 18px;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .realisations__wrapper__container__article {
+    width: 50%;
+  }
+}
+.realisations__wrapper__container__article__contenu {
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 18px;
+  height: 100%;
+  padding: 25px 20px 0px 20px;
+}
+.realisations__wrapper__container__article__contenu__lien {
+  color: black;
+  text-decoration: none;
+}
+.realisations__wrapper__container__article__contenu p {
+  color: black;
+  font-size: clamp(16px, 2vw, 20px);
+}
+
+@media (min-width: 768px) {
+  .swiper-button-next, .swiper-button-prev {
+    color: white; /* Change la couleur */
+    background: rgba(0, 0, 0, 0.5); /* Ajoute un fond semi-transparent */
+    padding: 10px;
+    border-radius: 50%;
+    transition: 0.3s;
+  }
+  .swiper-button-next:hover, .swiper-button-prev:hover {
+    background: rgba(0, 0, 0, 0.8);
+  }
+  /* Ajuste la taille des flèches */
+  .swiper-button-next::after, .swiper-button-prev::after {
+    font-size: 20px;
+  }
+}
+.eye-button {
+  z-index: 1000;
+  position: absolute;
+  top: 70px;
+  right: 70px;
 }
 
 /** Mandat B - Réalisations **/

@@ -48,6 +48,9 @@
         }
          wp_reset_postdata();  ?>
          </section>
+    <section class="realisations">
+              
+        <div class="realisations__wrapper swiper-wrapper">
         <?php
       
         //Requête et boucle d'affichage des articles avec ACF
@@ -76,41 +79,115 @@ $image_info=get_field("photo_1");
         if($image_info!=null){
 
             //Utiliser la balise picture pour le redimensionnement de l'image ?>
+      
+            <section class="realisations__wrapper__container swiper-slide" id="realisation-<?php echo $post->ID;?>">
+
+                <div class="realisations__wrapper__container__image">
             <picture>
                  <source media="(min-width: 800px)" srcset="<?php echo $image_info['sizes']["large"];?>">
                  <source media="(min-width: 601px)" srcset="<?php echo $image_info['sizes']["medium"];?>">
-                <img src="<?php echo $image_info['sizes']['thumbnail'];?>" alt="<?php echo $image_info["alt"];?>">
+                <img src="<?php echo $image_info['sizes']['thumbnail'];?>" alt="<?php echo $image_info["alt"];?>" class="realisations__wrapper__container__image__img">
             </picture>
-
+             <button class="eye-button">👁</button>
+</div>
 <?php }?>
-                <article class="article">
-                    <header class="article__entete">
-                        <h2 class="article__titre">
+                <article class="realisations__wrapper__container__article ">
+                    <div class="realisations__wrapper__container__article__contenu">
+                    <header class="realisations__wrapper__container__article__contenu__entete">
+                        <h2 class="realisations__wrapper__container__article__contenu__titre">
                             <?php //affiche le lien et le titre de l'article'?>
-                            <a class="article__lien" href="<?php the_permalink();?>"><?php the_title()?></a>
+                            <a class="realisations__wrapper__container__article__contenu__lien" href="<?php the_permalink();?>"><?php the_title()?></a>
                         </h2>
                     </header>
-                   
-
                     <p><?php echo get_field("nom_client")?></p>
 
-                    <p class="article__texte">
+                    <p class="realisations__wrapper__container__article__contenu__texte">
                         <?php //affiche le l'extrait de la réalisation
                         the_excerpt();
                         ?>
                     </p>
+                    </div>
                 </article>
+               
+                </section>
+               
             <?php }
 
             //réinitialise les données reçues par défaut du gabarit pour afficher le
             //reste des informations de la page, s'il y a lieu
             //wp_reset_postdata();
         }
+        
+
          wp_reset_postdata(); ?>
-   
+         
+            </div>
+             <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+           
+    </section>
         
 
 
 </main>
 
-<?php get_footer(); ?>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    console.log("Swiper est-il disponible ?", typeof Swiper !== "undefined" ? "Oui" : "Non");
+
+    const swiper = new Swiper('.realisations', {
+        slidesPerView: 1,
+        spaceBetween: 150,
+        loop: true,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+            640: {
+                slidesPerView: 2,
+                spaceBetween: 20
+            },
+            768: {
+                slidesPerView: 3,
+                spaceBetween: 40
+            }
+        }
+    });
+
+    console.log("Swiper initialisé :", swiper);
+
+    // Gestion du bouton "œil" pour afficher/cacher l'overlay sur mobile
+    const eyeButtons = document.querySelectorAll('.eye-button');
+    
+    eyeButtons.forEach(boutonOeil => {
+        boutonOeil.addEventListener('click', evenement => {
+            console.log('click');
+            
+            
+            // Trouver le conteneur parent du bouton
+            const container = evenement.currentTarget.closest('.realisations__wrapper__container');
+            
+            // Sélectionner l'article à l'intérieur de ce conteneur
+            const overlay = container.querySelector('.realisations__wrapper__container__article');
+            const image = container.querySelector('.realisations__wrapper__container__image__img');
+
+            if (overlay.style.opacity === '1') {
+                overlay.style.opacity = '0';
+                image.style.opacity = '1';
+               
+            } else {
+                overlay.style.opacity = '1';
+            
+                image.style.opacity = '0';
+            }
+        });
+    });
+});
+
+
+    </script>
+    <?php get_footer(); ?>
