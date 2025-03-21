@@ -1,0 +1,111 @@
+
+// H2 Page Nos Réalisations
+.h2__realisations{
+    text-align: center;
+}
+
+.titre__realisations{
+    border-bottom: 1px solid black;
+    width: 100%;
+    margin-top: 4em;
+    
+}
+
+// ARTICLES
+.article{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.article__titre {
+    margin-bottom: 5px; 
+}
+
+//h2
+.article__lien{
+    text-decoration: none;
+    text-transform: lowercase;
+    text-transform: capitalize;
+    color: black;
+}
+
+.nom__client{
+    color: #D47057;
+    font-size: 1.5em; 
+    font-weight: bold;
+    margin-top: 0; 
+    margin-bottom: 10px;
+    padding-bottom: 3px;
+    border-bottom: 1px solid black; 
+}
+
+
+// GRID TABLE ET MOBILE
+// Alternance des images et du texte gauche-droite
+
+
+
+.realisations-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.article__image {
+    width: 100%;
+}
+// Retour en colum au format mobile
+@media screen and (min-width: 800px) and (max-width: 2000px){ //A CHANGER LE MEDIA QUERRY ESSAIE SUR MONITEUR
+    .realisations-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        align-items: center;
+    }
+    
+    .article {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .realisations-container:nth-child(even) {
+        grid-template-areas: "text image";
+    }
+    
+    .realisations-container:nth-child(odd) {
+        grid-template-areas: "image text";
+    }
+    
+    .article__image {
+        grid-area: image;
+        width: 100%;
+        height: auto;
+    }
+    
+    .article__content {
+        grid-area: text;
+    }
+    
+}
+
+//ÉLÉMENTS INTERACTIFS
+// Bouton
+.bouton__realisations {
+    background-color: #FFFFFF;
+    color: black;
+    text-decoration: none;
+    padding: 10px 20px;
+    width: 120px;
+    border: 0.5px solid black;
+    border-radius: 8px;
+    
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+
+
+
