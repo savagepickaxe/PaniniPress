@@ -282,9 +282,9 @@ select {
  *    `input` and others.
  */
 button,
-html input[type="button"],
-input[type="reset"],
-input[type="submit"] {
+html input[type=button],
+input[type=reset],
+input[type=submit] {
   -webkit-appearance: button; /* 2 */
   cursor: pointer; /* 3 */
 }
@@ -321,8 +321,8 @@ input {
  * 1. Address box sizing set to `content-box` in IE 8/9/10.
  * 2. Remove excess padding in IE 8/9/10.
  */
-input[type="checkbox"],
-input[type="radio"] {
+input[type=checkbox],
+input[type=radio] {
   box-sizing: border-box; /* 1 */
   padding: 0; /* 2 */
 }
@@ -332,8 +332,8 @@ input[type="radio"] {
  * `font-size` values of the `input`, it causes the cursor style of the
  * decrement button to change from `default` to `text`.
  */
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
   height: auto;
 }
 
@@ -342,7 +342,7 @@ input[type="number"]::-webkit-outer-spin-button {
  * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
  *    (include `-moz` to future-proof).
  */
-input[type="search"] {
+input[type=search] {
   -webkit-appearance: textfield; /* 1 */
   -moz-box-sizing: content-box;
   -webkit-box-sizing: content-box; /* 2 */
@@ -354,8 +354,8 @@ input[type="search"] {
  * Safari (but not Chrome) clips the cancel button when the search input has
  * padding (and `textfield` appearance).
  */
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-decoration {
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
@@ -462,8 +462,7 @@ th {
   position: absolute;
   width: 1px;
 }
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus,
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus,
 .screen-reader-only.focusable:active,
 .screen-reader-only.focusable:focus {
   clip: auto;
@@ -568,7 +567,7 @@ h3--desktop,
 * @todo Compléter selon l'énoncé de l'exercice
 */
 .hyperlien {
-  color: #2678b5;
+  color: #2678B5;
   text-decoration: none;
 }
 .hyperlien--visited {
@@ -864,13 +863,11 @@ body {
   background-color: black;
   margin: 10px 0px;
 }
-.realisations__wrapper__container__boutonsuiv,
-.realisations__wrapper__container__boutonprec {
+.realisations__wrapper__container__boutonsuiv, .realisations__wrapper__container__boutonprec {
   display: none;
 }
 @media (min-width: 768px) {
-  .realisations__wrapper__container__boutonsuiv,
-  .realisations__wrapper__container__boutonprec {
+  .realisations__wrapper__container__boutonsuiv, .realisations__wrapper__container__boutonprec {
     display: block;
     position: absolute;
     z-index: 1000;
@@ -879,12 +876,10 @@ body {
     cursor: pointer;
   }
 }
-.realisations__wrapper__container__boutonsuiv:hover,
-.realisations__wrapper__container__boutonprec:hover {
+.realisations__wrapper__container__boutonsuiv:hover, .realisations__wrapper__container__boutonprec:hover {
   color: #d47057;
 }
-.realisations__wrapper__container__boutonsuiv:active,
-.realisations__wrapper__container__boutonprec:active {
+.realisations__wrapper__container__boutonsuiv:active, .realisations__wrapper__container__boutonprec:active {
   color: #746662;
 }
 .realisations__wrapper__container__boutonsuiv {
@@ -895,6 +890,93 @@ body {
 }
 
 /** Mandat B - Réalisations **/
+.h2__realisations {
+  text-align: center;
+}
+
+.titre__realisations {
+  border-bottom: 1px solid black;
+  width: 100%;
+  margin-top: 4em;
+}
+
+.article {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.article__titre {
+  margin-bottom: 5px;
+}
+
+.article__lien {
+  text-decoration: none;
+  text-transform: lowercase;
+  text-transform: capitalize;
+  color: black;
+}
+
+.nom__client {
+  color: #D47057;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 10px;
+  padding-bottom: 3px;
+  border-bottom: 1px solid black;
+}
+
+.realisations-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.article__image {
+  width: 100%;
+}
+
+@media screen and (min-width: 800px) and (max-width: 2000px) {
+  .realisations-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+  }
+  .article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .realisations-container:nth-child(even) {
+    grid-template-areas: "text image";
+  }
+  .realisations-container:nth-child(odd) {
+    grid-template-areas: "image text";
+  }
+  .article__image {
+    grid-area: image;
+    width: 100%;
+    height: auto;
+  }
+  .article__content {
+    grid-area: text;
+  }
+}
+.bouton__realisations {
+  background-color: #FFFFFF;
+  color: black;
+  text-decoration: none;
+  padding: 10px 20px;
+  width: 120px;
+  border: 0.5px solid black;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
 /** Mandat C - Équipe **/
 /** Mandat D - Services **/
 /****** MODULES ******/
@@ -903,7 +985,7 @@ body {
 .entete {
   display: flex;
   flex-direction: row;
-  background-color: #82a583;
+  background-color: #82A583;
   align-items: center;
   padding: 20px 20px 0px 20px;
 }
@@ -1068,8 +1150,7 @@ body {
     font-size: clamp(2rem, 2vw, 3rem);
   }
 }
-.menu-item a:link,
-.menu-item a:visited {
+.menu-item a:link, .menu-item a:visited {
   text-decoration: none;
   color: inherit;
 }
@@ -1105,7 +1186,7 @@ body {
     font-size: clamp(4rem, 2vw, 5rem);
     text-align: end;
     flex-direction: column;
-    background-color: #82a583;
+    background-color: #82A583;
     width: 100%;
     right: 0;
     z-index: 0;
