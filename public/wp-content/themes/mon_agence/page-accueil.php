@@ -88,21 +88,21 @@ $image_info=get_field("photo_1");
                  <source media="(min-width: 601px)" srcset="<?php echo $image_info['sizes']["medium"];?>">
                 <img src="<?php echo $image_info['sizes']['thumbnail'];?>" alt="<?php echo $image_info["alt"];?>" class="realisations__wrapper__container__image__img">
             </picture>
-             <button class="eye-button">👁</button>
+             <button class="realisations__wrapper__container__image__bouton">👁</button>
 </div>
 <?php }?>
                 <article class="realisations__wrapper__container__article ">
                     <div class="realisations__wrapper__container__article__contenu">
                     <header class="realisations__wrapper__container__article__contenu__entete">
                         <h2 class="realisations__wrapper__container__article__contenu__titre">
-                            <?php //affiche le lien et le titre de l'article'?>
+                           
                             <a class="realisations__wrapper__container__article__contenu__lien" href="<?php the_permalink();?>"><?php the_title()?></a>
                         </h2>
                     </header>
                     <p><?php echo get_field("nom_client")?></p>
 
                     <p class="realisations__wrapper__container__article__contenu__texte">
-                        <?php //affiche le l'extrait de la réalisation
+                        <?php 
                         the_excerpt();
                         ?>
                     </p>
@@ -122,8 +122,8 @@ $image_info=get_field("photo_1");
          wp_reset_postdata(); ?>
          
             </div>
-             <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
+             <div class="realisations__wrapper__container__boutonprec">⇦</div>
+                <div class="realisations__wrapper__container__boutonsuiv">⇨</div>
            
     </section>
         
@@ -143,16 +143,16 @@ document.addEventListener('DOMContentLoaded', () => {
         spaceBetween: 150,
         loop: true,
         navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
+            nextEl: '.realisations__wrapper__container__boutonsuiv',
+            prevEl: '.realisations__wrapper__container__boutonprec',
         },
         breakpoints: {
             640: {
                 slidesPerView: 2,
                 spaceBetween: 20
             },
-            768: {
-                slidesPerView: 3,
+            1024: {
+                slidesPerView: 1,
                 spaceBetween: 40
             }
         }
@@ -161,7 +161,7 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log("Swiper initialisé :", swiper);
 
     // Gestion du bouton "œil" pour afficher/cacher l'overlay sur mobile
-    const eyeButtons = document.querySelectorAll('.eye-button');
+    const eyeButtons = document.querySelectorAll('.realisations__wrapper__container__image__bouton');
     
     eyeButtons.forEach(boutonOeil => {
         boutonOeil.addEventListener('click', evenement => {
