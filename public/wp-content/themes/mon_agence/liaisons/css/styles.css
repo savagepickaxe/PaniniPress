@@ -645,7 +645,7 @@ body {
 
 /** Mandat A - Accueil **/
 .page {
-  background-color: #FFF8DE;
+  background-color: #fff8de;
 }
 
 .nouvelles {
@@ -657,6 +657,7 @@ body {
 @media (min-width: 768px) {
   .nouvelles {
     max-width: 80vw;
+    gap: 10rem;
   }
 }
 
@@ -677,12 +678,19 @@ body {
 @media (min-width: 768px) {
   .nouvelles__article__imageUne {
     width: 50%;
+    max-width: 23vw;
+    max-height: 60vh;
+    overflow: hidden;
+    display: flex;
+    margin: 0 auto;
+    padding: 20px 0px 20px 0px;
   }
 }
 .nouvelles__article__imageUne img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
+  border-radius: 18px;
 }
 .nouvelles__article__textes {
   display: flex;
@@ -691,7 +699,7 @@ body {
   gap: 1rem;
 }
 .nouvelles__article__textes__date {
-  color: #D47057;
+  color: #d47057;
 }
 .nouvelles__article__textes .is-layout-flex {
   justify-content: center;
@@ -853,7 +861,7 @@ body {
   }
 }
 .realisations__wrapper__container__article__contenu p:first-of-type {
-  color: #D47057;
+  color: #d47057;
 }
 .realisations__wrapper__container__article__contenu p:first-of-type::after {
   content: "";
@@ -877,7 +885,7 @@ body {
   }
 }
 .realisations__wrapper__container__boutonsuiv:hover, .realisations__wrapper__container__boutonprec:hover {
-  color: #D47057;
+  color: #d47057;
 }
 .realisations__wrapper__container__boutonsuiv:active, .realisations__wrapper__container__boutonprec:active {
   color: #746662;
@@ -1131,7 +1139,7 @@ body {
 .piedDePage {
   padding: 0px 5% 20px 5%;
   margin: 0 auto;
-  background-color: #82A583;
+  background-color: #82a583;
   border-top: 1px solid #333;
   color: white;
   clear: both;
