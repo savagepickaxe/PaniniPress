@@ -623,7 +623,7 @@ h3--desktop,
 
 body {
   padding: 0;
-  font: 0.8em Verdana, Arial, Helvetica, sans-serif;
+  font: 0.8em Verdana, Helvetica, sans-serif;
 }
 
 .contenu {
@@ -890,8 +890,30 @@ body {
 }
 
 /** Mandat B - Réalisations **/
+.page__realisations {
+  text-align: center;
+  margin: 2rem;
+  background-image: url("../images/legumes_mobile.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center 50px;
+}
+
+@media screen and (min-width: 800px) and (max-width: 2000px) {
+  .page__realisations {
+    background-image: url("../images/legumes_table.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 50px;
+    background-attachment: fixed;
+    width: 100%;
+  }
+}
 .h2__realisations {
   text-align: center;
+  text-transform: lowercase;
+  text-transform: capitalize;
 }
 
 .titre__realisations {
@@ -900,12 +922,19 @@ body {
   margin-top: 4em;
 }
 
-.article {
+.article_realisations {
   display: flex;
   flex-direction: column;
   text-align: center;
+  padding-bottom: 15px;
 }
 
+@media screen and (min-width: 800px) and (max-width: 2000px) {
+  .article_realisations {
+    width: 55%;
+    margin: auto;
+  }
+}
 .article__titre {
   margin-bottom: 5px;
 }
@@ -931,13 +960,18 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2rem;
 }
 
 .article__image {
   width: 100%;
+  padding-top: 60px;
 }
 
+@media screen and (min-width: 800px) and (max-width: 2000px) {
+  .article__image {
+    padding-bottom: 40px;
+  }
+}
 @media screen and (min-width: 800px) and (max-width: 2000px) {
   .realisations-container {
     display: grid;
@@ -961,11 +995,9 @@ body {
     width: 100%;
     height: auto;
   }
-  .article__content {
-    grid-area: text;
-  }
 }
 .bouton__realisations {
+  align-self: center;
   background-color: #FFFFFF;
   color: black;
   text-decoration: none;
@@ -973,8 +1005,93 @@ body {
   width: 120px;
   border: 0.5px solid black;
   border-radius: 8px;
+  box-shadow: 2.2px 3px rgba(0, 0, 0, 0.15);
   cursor: pointer;
   transition: background-color 0.3s;
+}
+
+.image_haut_page {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  max-height: 400px;
+  overflow: hidden;
+}
+
+.image_haut_page picture,
+.image_haut_page img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.entete__sur__image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black;
+  text-align: center;
+}
+
+.article__titre__single__realisation {
+  font-family: "Judson", serif;
+  font-size: clamp(32px, 3vw, 48px);
+  font-weight: bold;
+  margin-bottom: 0.2em;
+  text-transform: lowercase;
+  text-transform: capitalize;
+}
+
+.client__single__realisation {
+  font-family: "Judson", serif;
+  font-size: 32px;
+  font-weight: bold;
+  margin-top: 15px;
+  text-transform: lowercase;
+  text-transform: capitalize;
+}
+
+.notre__mandat__realisation,
+.nos__realisations__realisation {
+  font-family: "Judson", serif;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  color: #D47057;
+}
+
+.article__single__realisation p:not(.notre__mandat__realisation) {
+  font-family: "Abel", serif;
+  font-size: 20px;
+  text-align: center;
+}
+
+.carousel__controle {
+  background: none;
+  border: none;
+  font-size: 4rem;
+  color: #000000;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.carousel__controle:hover {
+  transform: scale(1.2);
+}
+
+.carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2em;
+}
+
+.article__piedPage {
+  text-align: center;
+  margin-top: 5em;
+  margin-bottom: 2em;
+  color: 666666;
 }
 
 /** Mandat C - Équipe **/

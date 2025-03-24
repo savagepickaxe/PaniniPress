@@ -31,8 +31,8 @@ let carousel = {
     let libellePrec = document.createElement("span");
     let libelleSuiv = document.createElement("span");
     // On associe le texte du libellé à l'élément html
-    libellePrec.innerHTML = "Précédent";
-    libelleSuiv.innerHTML = "Suivant";
+    libellePrec.innerHTML = "←";
+    libelleSuiv.innerHTML = "→";
     // On ajoute les libellés dans les boutons
     this.refBoutonPrec.appendChild(libellePrec);
     this.refBoutonSuiv.appendChild(libelleSuiv);
