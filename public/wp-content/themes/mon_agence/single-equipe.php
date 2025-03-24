@@ -1,53 +1,73 @@
 <?php
 get_header();
-echo "single-equipe.php";
+
 ?>
 
 <main class="page">
 
 <?php the_post(); //nécessaire à the_author() et the_date()
    // var_dump($post); //Ce que reçoit la page?>
-    <article class="article">
-        <header class="article__entete">
-            <h2 class="article__titre"><?php the_title() ?></h2>
+      <header class="article__entete">
+            <h1 class="equipesinglearticle__titre"><?php the_title() ?></h1>
         </header>
 		
-      
+    <article class="article">
+     
+		
         <?php
 
-        //Affichage de plusieurs images responsives définies dans les champs d'ACF
-        //Boucler dans les champs d'images de ACF - un champ par image
-        //Nommer les champs avec un numéro - photo_1, photo_2
-        //Ici 8 images possibles
-            for($cpt=1;$cpt<=8;$cpt++){
+//Affichage de plusieurs images responsives définies dans les champs d'ACF
 
-            //Le champ d'ACF doit être configuré pour retourner un tableau
-                $image_info=get_field("photo_".$cpt);
+//Boucler dans les champs d'images de ACF - un champ par image
+//Nommer les champs avec un numéro - photo_1, photo_2
+//Ici 8 images possibles
 
-                    //Si l'image est définie dans ACF
-                    if($image_info!=null){
-        
-                        //Utiliser la balise picture pour le redimensionnement de l'image
-                        //ici on utilise trois images personnalisées... Mais on peut utiliser thumbnail, medium, etc...
-                        //l'attribut sizes contient tout les formats d'image nécessaire.
+for($cpt=1;$cpt<=8;$cpt++){
+
+    //Le champ d'ACF doit être configuré pour retourner un tableau
+    $image_info=get_field("photo_".$cpt."_equipe");
+
+    //Si l'image est définie dans ACF
+    if($image_info!=null){
+        //Utiliser la balise picture pour le redimensionnement de l'image
+        //ici on utilise trois images personnalisées... Mais on peut utiliser thumbnail, medium, etc...
+        //l'attribut sizes contient tout les formats d'image nécessaire.
         ?>
-        <picture>
+        <picture class="equipesingle__image">
             <source media="(min-width: 800px)" srcset="<?= $image_info['sizes']["large"]?>">
             <source media="(min-width: 601px)" srcset="<?= $image_info['sizes']["medium"]?>">
-            <img src="<?= $image_info['sizes']["thumbnail"]?>" alt="<?= $image_info["alt"];?>">
+            <img  src="<?= $image_info['sizes']["thumbnail"]?>" alt="<?= $image_info["alt"];?>">
         </picture>
     <?php }
 } ?>
+      
 
-	   
-	   
 
-        <p class="article__texte">
+  <div class="equipesingle__infos">
+     <h2 class="equipesingle__titre">
+                            <?php //affiche le lien et le titre de l'article'?>
+                            <a class="equipe__lien" href="<?php the_permalink();?>"><?php the_title()?></a>
+     </h2>
+            <p class="equipe_titre_du_membre"><?php echo get_field("titre_du_membre")?></p>
+            <p class="article__texte">
             <?php  the_content() ?>
-        </p>
+            </p>
+    </div>
+   
+    <div class="equipesingle__navsequentielle">
+    <?php
+    the_post_navigation( array(
+        'prev_text'  => '<button class="equipesingle__navsequentielle__nav-button equipesingle__navsequentielle__prev-button">← %title</button>',
+        'next_text'  => '<button class="equipesingle__navsequentielle__nav-button equipesingle__navsequentielle__next-button">%title →</button>',
+    ) );
+    ?>
+    </div>
+
+	   
+	   
         <footer class="article__piedPage">
-            <h4>Par: <?php the_author(); //Attention! Nécessite un appel à the_post() avant cet affichage ?></h4>
-            <h4>  Publié le: <?php the_date(); //Attention! Nécessite un appel à the_post() avant cet affichage ?></h4>
+            <h4 class="equipe__author">Par: <?php the_author(); //Attention! Nécessite un appel à the_post() avant cet affichage ?></h4>
+            <h4 class="equipe__date">  Publié le: <?php the_date(); //Attention! Nécessite un appel à the_post() avant cet affichage ?></h4>
         </footer>
     </article>
 

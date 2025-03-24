@@ -11,14 +11,13 @@
 
 @font-face {
   font-family: Futura, sans-serif;
-  src: 	url('../fonts/Futura.ttc') format('truetype');
+  src: url("../fonts/Futura.ttc") format("truetype");
 }
-@import url('https://fonts.googleapis.com/css2?family=Abel&family=DM+Serif+Text:ital@0;1&family=Judson:ital,wght@0,400;0,700;1,400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Abel&family=DM+Serif+Text:ital@0;1&family=Judson:ital,wght@0,400;0,700;1,400&display=swap");
 
-$fontePrimaire : "Judson", serif;
-$fonteSecondaire :'Abel', sans-serif;
-.menu-item a{
-  
+$fontePrimaire: "Judson", serif;
+$fonteSecondaire: "Abel", sans-serif;
+.menu-item a {
   font-family: "DM Serif Text", serif;
   font-weight: 400;
   font-style: normal;
@@ -32,12 +31,12 @@ $bleuMoyen: #358ae0;
 $bleuPale: #68a8e8;
 $vertLime: #bbd531;
 $bleuMinuit: #012d61;
-$bleuMarin: #2678B5;
-
-$bleuMoyenTransparent : transparentize($bleuMoyen, 0.50);
+$bleuMarin: #2678b5;
+$saumon: #d47057;
+$bleuMoyenTransparent: transparentize($bleuMoyen, 0.5);
 
 /* Autres couleurs */
 $hyperlien: $bleuMarin;
 
 /** Points de rupture **/
-$desktop : 601px;
+$desktop: 601px;

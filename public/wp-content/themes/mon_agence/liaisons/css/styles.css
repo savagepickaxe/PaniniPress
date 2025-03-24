@@ -567,7 +567,7 @@ h3--desktop,
 * @todo Compléter selon l'énoncé de l'exercice
 */
 .hyperlien {
-  color: #2678B5;
+  color: #2678b5;
   text-decoration: none;
 }
 .hyperlien--visited {
@@ -623,7 +623,6 @@ h3--desktop,
 
 body {
   padding: 0;
-  font: 0.8em Verdana, Arial, Helvetica, sans-serif;
 }
 
 .contenu {
@@ -918,7 +917,7 @@ body {
 }
 
 .nom__client {
-  color: #D47057;
+  color: #d47057;
   font-size: 1.5em;
   font-weight: bold;
   margin-top: 0;
@@ -966,7 +965,7 @@ body {
   }
 }
 .bouton__realisations {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   color: black;
   text-decoration: none;
   padding: 10px 20px;
@@ -978,6 +977,262 @@ body {
 }
 
 /** Mandat C - Équipe **/
+.menu-item a {
+  font-family: "DM Serif Text", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/** Palette de couleurs **/
+/* Couleurs de base */
+.equipe__texte {
+  display: none;
+}
+
+.equipe_imgequipe figure {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.equipe__title {
+  display: none;
+}
+
+.equipe__h1 {
+  font-size: 55px;
+  margin: 20px;
+}
+
+.equipe_page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.equipe__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 23px;
+}
+
+.equipe__titre {
+  font-family: "Judson", serif;
+  font-size: 30px;
+  text-decoration: none;
+  width: 390px;
+  border-bottom: 1px solid;
+}
+.equipe__titre a:link {
+  text-decoration: none;
+}
+.equipe__titre a:visited {
+  text-decoration: none;
+}
+.equipe__titre a:hover {
+  text-decoration: none;
+}
+.equipe__titre a:active {
+  text-decoration: none;
+}
+
+.equipe_titre_du_membre {
+  font-family: "Judson", serif;
+  font-size: 28px;
+  color: #d47057;
+  margin: 20px;
+}
+.equipe_titre_du_membre__svg__fleche {
+  width: 24px;
+  height: 24px;
+  fill: black;
+}
+
+.equipe_ensavoirplus__bouton {
+  gap: 0.5rem;
+  padding: 0.5rem 3rem;
+  font-family: "Judson", serif;
+  font-size: 24px;
+  padding: 12px;
+  background-color: #ffffff;
+  border: 1px solid;
+  border-radius: 12px;
+  box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.215);
+  text-decoration: none;
+  margin-bottom: 65px;
+}
+.equipe_ensavoirplus__bouton a:link {
+  text-decoration: none;
+}
+.equipe_ensavoirplus__bouton a:visited {
+  text-decoration: none;
+}
+.equipe_ensavoirplus__bouton a:hover {
+  text-decoration: none;
+}
+.equipe_ensavoirplus__bouton a:active {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+}
+.equipe_ensavoirplus__bouton .equipe__hautdepage {
+  font-family: "Abel", sans-serif;
+  font-size: 22px;
+}
+
+@media (min-width: 768px) {
+  .equipe_imgequipe figure {
+    margin: 0;
+    padding: 0;
+  }
+  .equipe__h1 {
+    font-size: 96px;
+    align-content: left;
+  }
+  .equipe {
+    display: flex;
+    margin-top: 2em;
+  }
+  .equipe__infos {
+    align-items: left;
+    text-align: left;
+    gap: 3em;
+    margin-left: 2em;
+    margin-right: 2em;
+  }
+  .equipe_titre_du_membre {
+    margin-left: 0;
+  }
+  .equipe:nth-of-type(2) {
+    flex-direction: row-reverse;
+  }
+  .equipe__image {
+    margin-bottom: 6em;
+  }
+  .equipe__hautdepage {
+    font-family: "Abel", sans-serif;
+    font-size: 24px;
+  }
+}
+.equipe__author {
+  display: none;
+}
+
+.equipe__date {
+  display: none;
+}
+
+.equipesingle__image img {
+  padding-left: 8px;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 23px;
+}
+
+.equipesingle__titre {
+  font-family: "Judson", serif;
+  font-size: 30px;
+  text-decoration: none;
+  width: 390px;
+  border-bottom: 1px solid;
+}
+.equipesingle__titre a:link {
+  text-decoration: none;
+}
+.equipesingle__titre a:visited {
+  text-decoration: none;
+}
+.equipesingle__titre a:hover {
+  text-decoration: none;
+}
+.equipesingle__titre a:active {
+  text-decoration: none;
+}
+
+.equipesingle__infos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0px;
+  margin-bottom: 5em;
+}
+
+.equipesingle__navsequentielle {
+  width: 100%;
+  margin-left: 5px;
+}
+.equipesingle__navsequentielle__nav-button {
+  font-size: 18px;
+  gap: 0.5rem;
+  padding: 0.5rem 3rem;
+  font-family: "Judson", serif;
+  font-size: 16px;
+  color: rgb(0, 0, 0);
+  background-color: #ffffff;
+  border: 1px solid;
+  border-radius: 12px;
+  box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.215);
+  text-decoration: none;
+  margin-bottom: 65px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.equipesingle__navsequentielle__nav-button:hover {
+  background-color: rgb(175, 175, 175);
+}
+.equipesingle__navsequentielle__nav-button__prev-button {
+  margin-right: auto;
+}
+.equipesingle__navsequentielle__nav-button__next-button {
+  margin-left: auto;
+}
+
+@media (min-width: 768px) {
+  .article {
+    display: flex;
+    margin: auto;
+    max-width: 80vw;
+    flex-wrap: wrap;
+  }
+  .equipesinglearticle__titre {
+    font-size: 20px;
+    margin-bottom: 20px;
+    padding-top: 10px;
+    font-family: "Judson", serif;
+    text-align: center;
+  }
+  .equipesingle__image figure {
+    margin: 0;
+    padding: 0;
+  }
+  .equipesingle__image {
+    width: 50%;
+  }
+  .equipesingle__image img {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 6em;
+    height: auto;
+  }
+  .equipesinglearticle__titre {
+    font-size: 80px;
+    text-align: left;
+    margin: auto;
+    max-width: 80vw;
+    padding: 20px;
+  }
+  .equipesingle__infos {
+    display: flex;
+    align-items: flex-start;
+    text-align: left;
+    margin-bottom: 6em;
+    width: 50%;
+  }
+}
 /** Mandat D - Services **/
 /****** MODULES ******/
 /** entête de page **/
@@ -1211,7 +1466,26 @@ body {
   display: none;
 }
 
-/** Navigation latérale **/
+/** Navigation previous_next **/
+.nav-links,
+.posts-navigation .nav-links,
+.post-navigation .nav-links {
+  display: flex;
+}
+
+.nav-previous,
+.posts-navigation .nav-previous,
+.post-navigation .nav-previous {
+  flex: 1 0 50%;
+}
+
+.nav-next,
+.posts-navigation .nav-next,
+.post-navigation .nav-next {
+  text-align: end;
+  flex: 1 0 50%;
+}
+
 /** barres latérales  optionnelles**/
 
 /*# sourceMappingURL=styles.css.map */

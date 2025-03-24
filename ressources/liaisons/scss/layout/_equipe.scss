@@ -1,0 +1,288 @@
+$fontePrimaire: "Judson", serif;
+$fonteSecondaire: "Abel", sans-serif;
+.menu-item a {
+  font-family: "DM Serif Text", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+/** Palette de couleurs **/
+// Utiliser http://chir.ag/projects/name-that-color pour obtenir des noms uniques et mémorisables
+// Permettez-vous d'utiliser un nom de variable plus explicite si la suggestion de name-that-color est trop étrange
+
+/* Couleurs de base */
+$bleuMoyen: #358ae0;
+$bleuPale: #68a8e8;
+$vertLime: #bbd531;
+$bleuMinuit: #012d61;
+$bleuMarin: #2678b5;
+$saumon: #d47057;
+$blanc: #ffffff;
+
+.equipe__texte {
+  display: none;
+}
+
+.equipe_imgequipe figure {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.equipe__title {
+  display: none;
+}
+.equipe__h1 {
+  font-size: 55px;
+  margin: 20px;
+}
+.equipe_page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.equipe__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 23px;
+}
+
+.equipe__titre {
+  font-family: $fontePrimaire;
+  font-size: 30px;
+  text-decoration: none;
+  a:link {
+    text-decoration: none;
+  }
+  a:visited {
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: none;
+  }
+  a:active {
+    text-decoration: none;
+  }
+  width: 390px;
+  border-bottom: 1px solid;
+}
+
+.equipe_titre_du_membre {
+  font-family: $fontePrimaire;
+  font-size: 28px;
+  color: $saumon;
+  margin: 20px;
+
+  &__svg__fleche {
+    width: 24px;
+    height: 24px;
+    fill: black;
+  }
+}
+
+.equipe_ensavoirplus__bouton {
+  gap: 0.5rem;
+  padding: 0.5rem 3rem;
+  font-family: $fontePrimaire;
+  font-size: 24px;
+  padding: 12px;
+  background-color: $blanc;
+  border: 1px solid;
+  border-radius: 12px;
+  box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.215);
+  text-decoration: none;
+  margin-bottom: 65px;
+  a:link {
+    text-decoration: none;
+  }
+  a:visited {
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: none;
+  }
+  a:active {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+  }
+  .equipe__hautdepage {
+    font-family: $fonteSecondaire;
+    font-size: 22px;
+  }
+}
+
+////// FORMAT TABLE ////////////
+///
+///
+@media (min-width: 768px) {
+  .equipe_imgequipe figure {
+    margin: 0;
+    padding: 0;
+  }
+  .equipe__h1 {
+    font-size: 96px;
+    align-content: left;
+  }
+
+  .equipe {
+    display: flex;
+    margin-top: 2em;
+  }
+
+  .equipe__infos {
+    align-items: left;
+    text-align: left;
+    gap: 3em;
+    margin-left: 2em;
+    margin-right: 2em;
+  }
+
+  .equipe_titre_du_membre {
+    margin-left: 0;
+  }
+
+  .equipe:nth-of-type(2) {
+    flex-direction: row-reverse;
+  }
+  .equipe__image {
+    margin-bottom: 6em;
+  }
+  .equipe__hautdepage {
+    font-family: $fonteSecondaire;
+    font-size: 24px;
+  }
+}
+
+////// SINGLE EQUIPE ////////////////////////////////////////////
+///
+///
+///
+///
+///
+.equipe__author {
+  display: none;
+}
+.equipe__date {
+  display: none;
+}
+
+.equipesingle__image img {
+  padding-left: 8px;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 23px;
+}
+.equipesingle__titre {
+  font-family: $fontePrimaire;
+  font-size: 30px;
+  text-decoration: none;
+  a:link {
+    text-decoration: none;
+  }
+  a:visited {
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: none;
+  }
+  a:active {
+    text-decoration: none;
+  }
+  width: 390px;
+  border-bottom: 1px solid;
+}
+
+.equipesingle__infos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0px;
+  margin-bottom: 5em;
+}
+
+.equipesingle__navsequentielle {
+  width: 100%;
+  margin-left: 5px;
+
+  &__nav-button {
+    font-size: 18px;
+    gap: 0.5rem;
+    padding: 0.5rem 3rem;
+    font-family: $fontePrimaire;
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    background-color: $blanc;
+    border: 1px solid;
+    border-radius: 12px;
+    box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.215);
+    text-decoration: none;
+    margin-bottom: 65px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: rgb(175, 175, 175);
+    }
+
+    &__prev-button {
+      margin-right: auto;
+    }
+
+    &__next-button {
+      margin-left: auto;
+    }
+  }
+}
+////// SINGLE EQUIPE FORMAT TABLE ////////////////////////////////////////////
+///
+@media (min-width: 768px) {
+  .article {
+    display: flex;
+    margin: auto;
+    max-width: 80vw;
+    flex-wrap: wrap;
+  }
+
+  .equipesinglearticle__titre {
+    font-size: 20px;
+    margin-bottom: 20px;
+    padding-top: 10px;
+    font-family: $fontePrimaire;
+    text-align: center;
+  }
+
+  .equipesingle__image figure {
+    margin: 0;
+    padding: 0;
+  }
+  .equipesingle__image {
+    width: 50%;
+  }
+  .equipesingle__image img {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 6em;
+
+    height: auto;
+  }
+
+  .equipesinglearticle__titre {
+    font-size: 80px;
+    text-align: left;
+    margin: auto;
+    max-width: 80vw;
+    padding: 20px;
+  }
+
+  .equipesingle__infos {
+    display: flex;
+    align-items: flex-start;
+    text-align: left;
+    margin-bottom: 6em;
+    width: 50%;
+  }
+}
