@@ -987,7 +987,7 @@ body {
     gap: 2rem;
     align-items: center;
   }
-  .article {
+  .article_realisations {
     display: flex;
     flex-direction: column;
     justify-content: center;
