@@ -645,6 +645,18 @@ body {
 /** Mandat A - Accueil **/
 .page {
   background-color: #fff8de;
+  background-size: cover;
+  background-position: center 50px;
+}
+@media (max-width: 768px) {
+  .page {
+    background-image: url("../images/legumes_mobile.png");
+  }
+}
+@media (min-width: 768px) {
+  .page {
+    background-image: url("../images/legumes_table.png");
+  }
 }
 
 .nouvelles {
@@ -696,6 +708,20 @@ body {
   flex-direction: column;
   justify-content: center;
   gap: 1rem;
+}
+.nouvelles__article__textes__lien {
+  gap: 0.5rem;
+  padding: 0.5rem 3rem;
+  font-size: 24px;
+  padding: 12px;
+  border: 1px solid;
+  border-radius: 12px;
+  box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.215);
+  text-decoration: none;
+  margin-bottom: 65px;
+  margin: auto;
+  display: flex;
+  width: fit-content;
 }
 .nouvelles__article__textes__date {
   color: #d47057;
@@ -816,7 +842,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 50px;
+  padding: 50px 50px 0px 50px;
   border-radius: 18px;
   text-align: center;
 }
@@ -825,6 +851,7 @@ body {
     width: 35%;
     position: relative;
     opacity: 1;
+    padding: 50px;
   }
 }
 .realisations__wrapper__container__article__contenu {
@@ -837,18 +864,32 @@ body {
 @media (min-width: 768px) {
   .realisations__wrapper__container__article__contenu {
     text-align: left;
-    padding: 25px 30px 0px 30px;
+    padding: 25px 30px 10px 30px;
   }
 }
-.realisations__wrapper__container__article__contenu__lien {
+.realisations__wrapper__container__article__contenu__titre {
+  color: black;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.realisations__wrapper__container__article__contenu__titre__lien {
   color: black;
   text-decoration: none;
-  font-weight: bold;
 }
-@media (min-width: 768px) {
-  .realisations__wrapper__container__article__contenu__lien {
-    font-size: 32px;
-  }
+.realisations__wrapper__container__article__contenu__lien {
+  gap: 0.5rem;
+  padding: 0.5rem 3rem;
+  font-size: 24px;
+  padding: 12px;
+  border: 1px solid;
+  border-radius: 12px;
+  box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.215);
+  text-decoration: none;
+  margin-bottom: 65px;
+  margin: auto;
+  display: flex;
+  width: fit-content;
 }
 .realisations__wrapper__container__article__contenu p {
   color: black;
@@ -1361,7 +1402,6 @@ body {
 /** Mandat D - Services **/
 /****** MODULES ******/
 /** entête de page **/
-/* Entete de page */
 .entete {
   display: flex;
   flex-direction: row;

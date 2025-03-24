@@ -35,6 +35,9 @@
                         <?php
                             the_content();
                         ?>
+                        
+                      
+                            <a href="<?php the_permalink();?>" class="nouvelles__article__textes__lien">En savoir plus -></a>
                     </div>
                     </div>
                     <?php if(has_post_thumbnail()){?>
@@ -85,11 +88,11 @@ $image_info=get_field("photo_1");
                 <div class="realisations__wrapper__container__image">
             <picture>
                  <source media="(min-width: 800px)" srcset="<?php echo $image_info['sizes']["large"];?>">
-                 <source media="(min-width: 601px)" srcset="<?php echo $image_info['sizes']["medium"];?>">
+                 <source media="(min-width: 401px)" srcset="<?php echo $image_info['sizes']["medium"];?>">
                 <img src="<?php echo $image_info['sizes']['thumbnail'];?>" alt="<?php echo $image_info["alt"];?>" class="realisations__wrapper__container__image__img">
             </picture>
              <button class="realisations__wrapper__container__image__bouton">👁</button>
-             <?php the_permalink()  ?>
+           
 </div>
 <?php }?>
                 <article class="realisations__wrapper__container__article ">
@@ -97,7 +100,7 @@ $image_info=get_field("photo_1");
                     <header class="realisations__wrapper__container__article__contenu__entete">
                         <h2 class="realisations__wrapper__container__article__contenu__titre">
                            
-                            <a class="realisations__wrapper__container__article__contenu__lien" href="<?php the_permalink();?>"><?php the_title()?></a>
+                            <a class="realisations__wrapper__container__article__contenu__titre__lien" href="<?php the_permalink();?>"><?php the_title()?></a>
                         </h2>
                     </header>
                     <p><?php echo get_field("nom_client")?></p>
@@ -107,7 +110,8 @@ $image_info=get_field("photo_1");
                         the_excerpt();
                         ?>
                     </p>
-
+                  
+                    <a href="<?php the_permalink();?>" class="realisations__wrapper__container__article__contenu__lien">En savoir plus -></a>
                     </div>
                 </article>
                
