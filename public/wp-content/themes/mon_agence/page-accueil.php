@@ -3,7 +3,7 @@
 
 <main class="page">
     <section class="accueil__image">
-    <img src="<?php echo get_field("imageaccueil")['sizes']['thumbnail']; ?>" alt="Image Accueil">
+    <img src="<?php echo get_field("imageaccueil")['sizes']['large']; ?>" alt="Image Accueil">
 </section>
      <section class="nouvelles">
     <?php
@@ -40,7 +40,7 @@
                     <?php if(has_post_thumbnail()){?>
                          <div class="nouvelles__article__imageUne">
                                 <?php //affiche l'image de l'article
-                                the_post_thumbnail("medium"); //peut être thumbnail, ou large. Il y a plusieurs possibilités?>
+                                the_post_thumbnail("large"); //peut être thumbnail, ou large. Il y a plusieurs possibilités?>
                         </div>
                     <?php } ?>
                 </article>
@@ -89,6 +89,7 @@ $image_info=get_field("photo_1");
                 <img src="<?php echo $image_info['sizes']['thumbnail'];?>" alt="<?php echo $image_info["alt"];?>" class="realisations__wrapper__container__image__img">
             </picture>
              <button class="realisations__wrapper__container__image__bouton">👁</button>
+             <?php the_permalink()  ?>
 </div>
 <?php }?>
                 <article class="realisations__wrapper__container__article ">
@@ -106,6 +107,7 @@ $image_info=get_field("photo_1");
                         the_excerpt();
                         ?>
                     </p>
+
                     </div>
                 </article>
                
@@ -147,10 +149,7 @@ document.addEventListener('DOMContentLoaded', () => {
             prevEl: '.realisations__wrapper__container__boutonprec',
         },
         breakpoints: {
-            640: {
-                slidesPerView: 2,
-                spaceBetween: 20
-            },
+          
             1024: {
                 slidesPerView: 1,
                 spaceBetween: 40

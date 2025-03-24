@@ -657,6 +657,7 @@ body {
 @media (min-width: 768px) {
   .nouvelles {
     max-width: 80vw;
+    gap: 10rem;
   }
 }
 
@@ -677,12 +678,19 @@ body {
 @media (min-width: 768px) {
   .nouvelles__article__imageUne {
     width: 50%;
+    max-width: 23vw;
+    max-height: 60vh;
+    overflow: hidden;
+    display: flex;
+    margin: 0 auto;
+    padding: 20px 0px 20px 0px;
   }
 }
 .nouvelles__article__imageUne img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
+  border-radius: 18px;
 }
 .nouvelles__article__textes {
   display: flex;
