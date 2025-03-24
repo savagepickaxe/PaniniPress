@@ -3,7 +3,7 @@
 get_header();
 ?>
 
-<main class="page">
+<main class="page__single__realisation">
 
 
 <?php
@@ -55,6 +55,15 @@ for($cpt=1;$cpt<=4;$cpt++){
                 }
 } ?>
 
+<div class="realisationsingle__navsequentielle">
+    <?php
+    the_post_navigation( array(
+        'prev_text'  => '<button class="realisationsingle__navsequentielle__nav-button realisationsingle__navsequentielle__nav-button__prev-button">← %title</button>',
+        'next_text'  => '<button class="realisationsingle__navsequentielle__nav-button realisationsingle__navsequentielle__nav-button__next-button">%title →</button>',
+    ) );
+    ?>
+    </div>
+
 <article>
 <footer class="article__piedPage">
             <h4>Par: <?php the_author();?></h4>
@@ -64,4 +73,5 @@ for($cpt=1;$cpt<=4;$cpt++){
 </main>
  
 <?php get_footer()?>
+
  
