@@ -912,7 +912,7 @@ body {
   background-position: center 50px;
 }
 
-@media screen and (min-width: 800px) and (max-width: 2000px) {
+@media screen and (min-width: 800px) {
   .page__realisations,
   .page__single__realisation {
     background-color: #FFF8DE;
@@ -927,8 +927,14 @@ body {
   text-align: center;
   text-transform: lowercase;
   text-transform: capitalize;
+  font-size: 40px;
 }
 
+@media screen and (min-width: 800px) {
+  .h2__realisations {
+    font-size: 80px;
+  }
+}
 .titre__realisations {
   border-bottom: 1px solid #000000;
   width: 100%;
@@ -942,7 +948,7 @@ body {
   padding-bottom: 15px;
 }
 
-@media screen and (min-width: 800px) and (max-width: 2000px) {
+@media screen and (min-width: 800px) {
   .article_realisations {
     width: 55%;
     margin: auto;
@@ -950,8 +956,14 @@ body {
 }
 .article__titre {
   margin-bottom: 5px;
+  font-size: 24px;
 }
 
+@media screen and (min-width: 800px) {
+  .article__titre {
+    font-size: 36px;
+  }
+}
 .article__lien {
   text-decoration: none;
   text-transform: lowercase;
@@ -969,6 +981,20 @@ body {
   border-bottom: 1px solid #000000;
 }
 
+.bouton__realisations {
+  align-self: center;
+  background-color: #ffffff;
+  color: #000000;
+  text-decoration: none;
+  padding: 10px 20px;
+  width: 120px;
+  border: 0.5px solid #000000;
+  border-radius: 8px;
+  box-shadow: 2.2px 3px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
 .realisations-container {
   display: flex;
   flex-direction: column;
@@ -980,12 +1006,12 @@ body {
   padding-top: 60px;
 }
 
-@media screen and (min-width: 800px) and (max-width: 2000px) {
+@media screen and (min-width: 800px) {
   .article__image {
     padding-bottom: 40px;
   }
 }
-@media screen and (min-width: 800px) and (max-width: 2000px) {
+@media screen and (min-width: 800px) {
   .realisations-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -1009,36 +1035,19 @@ body {
     height: auto;
   }
 }
-.bouton__realisations {
-  align-self: center;
-  background-color: #ffffff;
-  color: #000000;
-  text-decoration: none;
-  padding: 10px 20px;
-  width: 120px;
-  border: 0.5px solid #000000;
-  border-radius: 8px;
-  box-shadow: 2.2px 3px rgba(0, 0, 0, 0.15);
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.image_haut_page {
+.single-realisation__image-haut-page {
   position: relative;
   display: inline-block;
   width: 100%;
   max-height: 400px;
   overflow: hidden;
 }
-
-.image_haut_page picture,
-.image_haut_page img {
+.single-realisation__image-haut-page img {
   width: 100%;
   height: auto;
   display: block;
 }
-
-.entete__sur__image {
+.single-realisation__entete-sur-image {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1047,39 +1056,39 @@ body {
   text-align: center;
 }
 
-.article__titre__single__realisation {
+.single-realisation__titre {
   font-family: "Judson", serif;
   font-size: clamp(32px, 3vw, 48px);
   font-weight: bold;
   margin-bottom: 0.2em;
-  text-transform: lowercase;
   text-transform: capitalize;
 }
-
-.client__single__realisation {
+.single-realisation__client {
   font-family: "Judson", serif;
   font-size: 32px;
   font-weight: bold;
   margin-top: 15px;
-  text-transform: lowercase;
   text-transform: capitalize;
 }
-
-.notre__mandat__realisation,
-.nos__realisations__realisation {
+.single-realisation__mandat, .single-realisation__realisations {
   font-family: "Judson", serif;
   font-size: 24px;
   font-weight: bold;
   text-align: center;
   color: #d47057;
 }
-
-.article__single__realisation p:not(.notre__mandat__realisation) {
+.single-realisation__texte {
   font-family: "Abel", sans-serif;
   font-size: 20px;
   text-align: center;
 }
 
+.carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2em;
+}
 .carousel__controle {
   background: none;
   border: none;
@@ -1088,16 +1097,8 @@ body {
   cursor: pointer;
   transition: transform 0.2s ease;
 }
-
 .carousel__controle:hover {
   transform: scale(1.2);
-}
-
-.carousel {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 2em;
 }
 
 .article__piedPage {
