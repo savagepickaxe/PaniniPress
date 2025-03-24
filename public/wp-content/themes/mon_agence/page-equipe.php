@@ -3,11 +3,12 @@
 get_header();
 ?>
 
-    <main class="page">
-
+    <main class="equipe_page">
+ 
+  
         <?php //var_dump($post); //Ce que reçoit la page?>
         <div>
-            <h2><?php the_title(); ?></h2>
+           <h2 class="equipe__title"><?php the_title(); ?></h2>
         </div>
         <?php the_content(); ?>
 
@@ -28,37 +29,42 @@ get_header();
             //tant qu'il restera des articles
             foreach ($posts as $post){?>
                 <article class="equipe">
-                    <header class="equipe__entete">
+                <?php
+
+$image_info = get_field("photo_1_equipe");
+
+
+
+//Si l'image est définie dans ACF
+if($image_info!=null){
+
+    //Utiliser la balise picture pour le redimensionnement de l'image ?>
+    <picture class="equipe__image">
+        <source media="(min-width: 800px)" srcset="<?php echo $image_info['sizes']["large"];?>">
+        <source media="(min-width: 601px)" srcset="<?php echo $image_info['sizes']["medium"];?>">
+        <img src="<?php echo $image_info['sizes']['thumbnail'];?>" alt="<?php echo $image_info["alt"];?>">
+    </picture>
+
+<?php }?>
+                  <div class="equipe__infos">
+                     <header class="equipe__entete">
                         <h2 class="equipe__titre">
                             <?php //affiche le lien et le titre de l'article'?>
                             <a class="equipe__lien" href="<?php the_permalink();?>"><?php the_title()?></a>
                         </h2>
                     </header>
-                    <?php
+                 
 
-                    $image_info = get_field("photo_1_equipe");
-                    
-
-
-                    //Si l'image est définie dans ACF
-                    if($image_info!=null){
-
-                        //Utiliser la balise picture pour le redimensionnement de l'image ?>
-                        <picture>
-                            <source media="(min-width: 800px)" srcset="<?php echo $image_info['sizes']["large"];?>">
-                            <source media="(min-width: 601px)" srcset="<?php echo $image_info['sizes']["medium"];?>">
-                            <img src="<?php echo $image_info['sizes']['thumbnail'];?>" alt="<?php echo $image_info["alt"];?>">
-                        </picture>
-
-                    <?php }?>
-
-                    <p><?php echo get_field("titre_du_membre")?></p>
-
-                    <p class="equipe__texte">
-                        <?php //affiche le l'extrait de la réalisation
+                    <p class="equipe_titre_du_membre"><?php echo get_field("titre_du_membre")?></p>
+                    <button class="equipe_ensavoirplus__bouton"> <a href="<?php the_permalink();?>"> En savoir plus <svg class="svg__fleche" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z"/></svg></a></button>
+                  <div class="equipe__texte">
+                    <p>
+                     <?php //affiche le l'extrait de la réalisation
                         the_excerpt();
                         ?>
                     </p>
+                 </div>
+                    </div>
                 </article>
             <?php }
 

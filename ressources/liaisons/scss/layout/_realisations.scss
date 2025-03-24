@@ -1,95 +1,93 @@
 // H2 Page Nos Réalisations
 
-.page__realisations{
-    text-align: center;
-    margin: 2rem;
+.page__realisations {
+  text-align: center;
+  margin: 2rem;
 
-    //Images légumes
-    background-image: url('../images/legumes_mobile.png');
-    background-repeat: no-repeat;
-    background-size: cover; 
-    background-attachment: fixed;
-    background-position: center 50px; 
+  //Images légumes
+  background-image: url("../images/legumes_mobile.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center 50px;
 }
-@media screen and (min-width: 800px) and (max-width: 2000px){ //A CHANGER LE MEDIA QUERRY ESSAIE SUR MONITEUR
-    .page__realisations {
-    background-image: url('../images/legumes_table.png');
+@media screen and (min-width: 800px) and (max-width: 2000px) {
+  //A CHANGER LE MEDIA QUERRY ESSAIE SUR MONITEUR
+  .page__realisations {
+    background-image: url("../images/legumes_table.png");
     background-repeat: no-repeat;
-    background-size: cover; 
-    background-position: center 50px; 
+    background-size: cover;
+    background-position: center 50px;
     background-attachment: fixed;
     width: 100%;
-        
-    }}
-.h2__realisations{
-    text-align: center;
-    text-transform: lowercase;
-    text-transform: capitalize;
+  }
+}
+.h2__realisations {
+  text-align: center;
+  text-transform: lowercase;
+  text-transform: capitalize;
 }
 
-.titre__realisations{
-    border-bottom: 1px solid black;
-    width: 100%;
-    margin-top: 4em;
-    
+.titre__realisations {
+  border-bottom: 1px solid black;
+  width: 100%;
+  margin-top: 4em;
 }
 
 //ARTICLES
-.article_realisations{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    padding-bottom: 15px;
-
-    
+.article_realisations {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding-bottom: 15px;
 }
-@media screen and (min-width: 800px) and (max-width: 2000px){ //A CHANGER LE MEDIA QUERRY ESSAIE SUR MONITEUR
-    .article_realisations {
-        width: 55%;
-        margin: auto;
-
-        
-    }}
+@media screen and (min-width: 800px) and (max-width: 2000px) {
+  //A CHANGER LE MEDIA QUERRY ESSAIE SUR MONITEUR
+  .article_realisations {
+    width: 55%;
+    margin: auto;
+  }
+}
 
 .article__titre {
-    margin-bottom: 5px; 
+  margin-bottom: 5px;
 }
 
 //h2
-.article__lien{
-    text-decoration: none;
-    text-transform: lowercase;
-    text-transform: capitalize;
-    color: black;
+.article__lien {
+  text-decoration: none;
+  text-transform: lowercase;
+  text-transform: capitalize;
+  color: black;
 }
 
-.nom__client{
-    color: #D47057;
-    font-size: 1.5em; 
-    font-weight: bold;
-    margin-top: 0; 
-    margin-bottom: 10px;
-    padding-bottom: 3px;
-    border-bottom: 1px solid black; 
+.nom__client {
+  color: #d47057;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 10px;
+  padding-bottom: 3px;
+  border-bottom: 1px solid black;
 }
-
 
 // GRID TABLE ET MOBILE
 // Alternance des images et du texte gauche-droite
 .realisations-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .article__image {
-    width: 100%;
-    padding-top: 60px;
+  width: 100%;
+  padding-top: 60px;
 }
-@media screen and (min-width: 800px) and (max-width: 2000px){ //A CHANGER LE MEDIA QUERRY ESSAIE SUR MONITEUR
-    .article__image {
-        padding-bottom: 40px;
-    }
+@media screen and (min-width: 800px) and (max-width: 2000px) {
+  //A CHANGER LE MEDIA QUERRY ESSAIE SUR MONITEUR
+  .article__image {
+    padding-bottom: 40px;
+  }
 }
 
 // Retour en colonne au format mobile
@@ -125,108 +123,101 @@
 //ÉLÉMENTS INTERACTIFS
 // Bouton
 .bouton__realisations {
-    align-self: center;
-    background-color: #FFFFFF;
-    color: black;
-    text-decoration: none;
-    padding: 10px 20px;
-    width: 120px;
-    border: 0.5px solid black;
-    border-radius: 8px;
-    box-shadow: 2.2px 3px rgba(0,0,0,0.15);
-    cursor: pointer;
-    transition: background-color 0.3s;
+  align-self: center;
+  background-color: #ffffff;
+  color: black;
+  text-decoration: none;
+  padding: 10px 20px;
+  width: 120px;
+  border: 0.5px solid black;
+  border-radius: 8px;
+  box-shadow: 2.2px 3px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 //CSS POUR SINGLE RÉALISATION
 
-
 .image_haut_page {
-    position: relative;
-    display: inline-block;
-    width: 100%;
-    max-height: 400px;
-    overflow: hidden;
-  }
-  
-  .image_haut_page picture,
-  .image_haut_page img {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-  
-  .entete__sur__image {
-    position: absolute;
-    top: 50%; 
-    left: 50%; 
-    transform: translate(-50%, -50%);
-    color: black;
-    text-align: center;
-  }
-  
-
-.article__titre__single__realisation{
-    font-family: "Judson", serif;
-    font-size: clamp(32px,3vw,48px);
-    font-weight: bold;
-    margin-bottom: 0.2em; 
-    text-transform: lowercase;
-    text-transform: capitalize;
-
-
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  max-height: 400px;
+  overflow: hidden;
 }
 
-  .client__single__realisation{
-    font-family: "Judson", serif;
-    font-size: 32px;
-    font-weight: bold;
-    margin-top: 15px;  
-    text-transform: lowercase;
-    text-transform: capitalize;
-  }
-
-  .notre__mandat__realisation,
-  .nos__realisations__realisation{
-    font-family: "Judson", serif;
-    font-size: 24px;
-    font-weight: bold;
-    text-align: center;
-    color: #D47057;
-  }
-
-.article__single__realisation p:not(.notre__mandat__realisation){
-    font-family: "Abel", serif;
-    font-size: 20px;
-    text-align: center;
+.image_haut_page picture,
+.image_haut_page img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
+.entete__sur__image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black;
+  text-align: center;
+}
+
+.article__titre__single__realisation {
+  font-family: "Judson", serif;
+  font-size: clamp(32px, 3vw, 48px);
+  font-weight: bold;
+  margin-bottom: 0.2em;
+  text-transform: lowercase;
+  text-transform: capitalize;
+}
+
+.client__single__realisation {
+  font-family: "Judson", serif;
+  font-size: 32px;
+  font-weight: bold;
+  margin-top: 15px;
+  text-transform: lowercase;
+  text-transform: capitalize;
+}
+
+.notre__mandat__realisation,
+.nos__realisations__realisation {
+  font-family: "Judson", serif;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  color: #d47057;
+}
+
+.article__single__realisation p:not(.notre__mandat__realisation) {
+  font-family: "Abel", serif;
+  font-size: 20px;
+  text-align: center;
+}
 
 .carousel__controle {
-    background: none;
-    border: none;
-    font-size: 4rem;
-    color: #000000;
-    cursor: pointer;
-    transition: transform 0.2s ease;
-  }
-  
-  .carousel__controle:hover {
-    transform: scale(1.2);
-  }
-  
-
-.carousel{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 2em;
+  background: none;
+  border: none;
+  font-size: 4rem;
+  color: #000000;
+  cursor: pointer;
+  transition: transform 0.2s ease;
 }
 
-.article__piedPage{
-    text-align: center;
-    margin-top: 5em;
-    margin-bottom: 2em;
-    color: 666666;
+.carousel__controle:hover {
+  transform: scale(1.2);
 }
 
+.carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2em;
+}
+
+.article__piedPage {
+  text-align: center;
+  margin-top: 5em;
+  margin-bottom: 2em;
+  color: 666666;
+}
