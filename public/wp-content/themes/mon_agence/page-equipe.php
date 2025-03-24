@@ -3,7 +3,7 @@
 get_header();
 ?>
 
-    <main class="equipe_page">
+    <main class="equipe__page">
  
   
         <?php //var_dump($post); //Ce que reçoit la page?>
@@ -47,16 +47,16 @@ if($image_info!=null){
 
 <?php }?>
                   <div class="equipe__infos">
-                     <header class="equipe__entete">
-                        <h2 class="equipe__titre">
+                     <header class="equipe__infos__entete">
+                        <h2 class="equipe__infos__titre">
                             <?php //affiche le lien et le titre de l'article'?>
                             <a class="equipe__lien" href="<?php the_permalink();?>"><?php the_title()?></a>
                         </h2>
                     </header>
                  
 
-                    <p class="equipe_titre_du_membre"><?php echo get_field("titre_du_membre")?></p>
-                    <button class="equipe_ensavoirplus__bouton"> <a href="<?php the_permalink();?>"> En savoir plus <svg class="svg__fleche" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z"/></svg></a></button>
+                    <p class="equipe__infos__titre_du_membre"><?php echo get_field("titre_du_membre")?></p>
+                    <button class="equipe__infos__titre_du_membre__ensavoirplus__bouton"> <a class="equipe__infos__titre_du_membre__link" href="<?php the_permalink();?>"> En savoir plus <svg class="svg__fleche" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z"/></svg></a></button>
                   <div class="equipe__texte">
                     <p>
                      <?php //affiche le l'extrait de la réalisation

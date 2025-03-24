@@ -3,38 +3,35 @@
 get_header();
 ?>
 
-<main class="page">
+<main class="page__single__realisation">
 
 
 <?php
 $image_info = get_field("photo_5");
 if ($image_info != null) {
 ?>
-    <div class="image_haut_page">
+    <div class="single-realisation__image-haut-page">
         <picture>
             <source media="(min-width: 800px)" srcset="<?= $image_info['sizes']["large"] ?>">
             <source media="(min-width: 601px)" srcset="<?= $image_info['sizes']["medium"] ?>">
             <img src="<?= $image_info['sizes']["thumbnail"] ?>" alt="<?= $image_info["alt"]; ?>">
         </picture>
 
-        <header class="entete__sur__image">
-            <h2 class="article__titre__single__realisation"><?php the_title() ?></h2>
-            <h3 class="client__single__realisation"><?php echo get_field("nom_client"); ?></p>
+        <header class="single-realisation__entete-sur-image">
+            <h2 class="single-realisation__titre"><?php the_title() ?></h2>
+            <h3 class="single-realisation__client"><?php echo get_field("nom_client"); ?></h3>
         </header>
     </div>
 <?php } ?>
 
 <?php the_post();?>
-    <article class="article__single__realisation">
-        
-   
-        <p class="notre__mandat__realisation"> Notre mandat</p>
-        <p class="article__texte__single__realisation"> <?php  the_content() ?></p>
-    </article>
+<article class="single-realisation__article">
+  <p class="single-realisation__mandat">Notre mandat</p>
+  <p class="single-realisation__texte"><?php the_content() ?></p>
+</article>
 
-    <p class="nos__realisations__realisation"> Réalisations</p>
-
-    <?php
+<p class="single-realisation__realisations">Réalisations</p>
+<?php
  
 
 for($cpt=1;$cpt<=4;$cpt++){
@@ -55,6 +52,15 @@ for($cpt=1;$cpt<=4;$cpt++){
                 }
 } ?>
 
+<div class="realisationsingle__navsequentielle">
+    <?php
+    the_post_navigation( array(
+        'prev_text'  => '<button class="realisationsingle__navsequentielle__nav-button realisationsingle__navsequentielle__nav-button__prev-button">← %title</button>',
+        'next_text'  => '<button class="realisationsingle__navsequentielle__nav-button realisationsingle__navsequentielle__next-button">%title →</button>',
+    ) );
+    ?>
+    </div>
+
 <article>
 <footer class="article__piedPage">
             <h4>Par: <?php the_author();?></h4>
@@ -64,4 +70,5 @@ for($cpt=1;$cpt<=4;$cpt++){
 </main>
  
 <?php get_footer()?>
+
  

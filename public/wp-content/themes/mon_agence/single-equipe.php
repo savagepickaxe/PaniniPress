@@ -3,15 +3,15 @@ get_header();
 
 ?>
 
-<main class="page">
+<main class="equipesingle">
 
 <?php the_post(); //nécessaire à the_author() et the_date()
    // var_dump($post); //Ce que reçoit la page?>
       <header class="article__entete">
-            <h1 class="equipesinglearticle__titre"><?php the_title() ?></h1>
+            <h1 class="equipesingle__titre"><?php the_title() ?></h1>
         </header>
 		
-    <article class="article">
+    <article class="equipesingle__article">
      
 		
         <?php
@@ -44,11 +44,11 @@ for($cpt=1;$cpt<=8;$cpt++){
 
 
   <div class="equipesingle__infos">
-     <h2 class="equipesingle__titre">
+     <h2 class="equipesingle__infos__titre">
                             <?php //affiche le lien et le titre de l'article'?>
                             <a class="equipe__lien" href="<?php the_permalink();?>"><?php the_title()?></a>
      </h2>
-            <p class="equipe_titre_du_membre"><?php echo get_field("titre_du_membre")?></p>
+            <p class="equipe__infos__titre_du_membre"><?php echo get_field("titre_du_membre")?></p>
             <p class="article__texte">
             <?php  the_content() ?>
             </p>
@@ -65,9 +65,9 @@ for($cpt=1;$cpt<=8;$cpt++){
 
 	   
 	   
-        <footer class="article__piedPage">
-            <h4 class="equipe__author">Par: <?php the_author(); //Attention! Nécessite un appel à the_post() avant cet affichage ?></h4>
-            <h4 class="equipe__date">  Publié le: <?php the_date(); //Attention! Nécessite un appel à the_post() avant cet affichage ?></h4>
+        <footer class="equipesingle__piedPage">
+            <h4 class="equipesingle__piedPage__author">Par: <?php the_author(); //Attention! Nécessite un appel à the_post() avant cet affichage ?></h4>
+            <h4 class="equipesingle__piedPage__date">  Publié le: <?php the_date(); //Attention! Nécessite un appel à the_post() avant cet affichage ?></h4>
         </footer>
     </article>
 

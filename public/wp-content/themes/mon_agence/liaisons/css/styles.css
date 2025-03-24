@@ -938,9 +938,14 @@ body {
 }
 
 /** Mandat B - Réalisations **/
-.page__realisations {
+/* DONNÉES DE BASE */
+/* Couleurs de base */
+/* Textes */
+.page__realisations,
+.page__single__realisation {
   text-align: center;
-  margin: 2rem;
+  background-color: #FFF8DE;
+  padding: 10px;
   background-image: url("../images/legumes_mobile.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -948,24 +953,31 @@ body {
   background-position: center 50px;
 }
 
-@media screen and (min-width: 800px) and (max-width: 2000px) {
-  .page__realisations {
+@media screen and (min-width: 800px) {
+  .page__realisations,
+  .page__single__realisation {
+    background-color: #FFF8DE;
     background-image: url("../images/legumes_table.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center 50px;
     background-attachment: fixed;
-    width: 100%;
   }
 }
 .h2__realisations {
   text-align: center;
   text-transform: lowercase;
   text-transform: capitalize;
+  font-size: 40px;
 }
 
+@media screen and (min-width: 800px) {
+  .h2__realisations {
+    font-size: 80px;
+  }
+}
 .titre__realisations {
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #000000;
   width: 100%;
   margin-top: 4em;
 }
@@ -977,7 +989,7 @@ body {
   padding-bottom: 15px;
 }
 
-@media screen and (min-width: 800px) and (max-width: 2000px) {
+@media screen and (min-width: 800px) {
   .article_realisations {
     width: 55%;
     margin: auto;
@@ -985,13 +997,19 @@ body {
 }
 .article__titre {
   margin-bottom: 5px;
+  font-size: 24px;
 }
 
+@media screen and (min-width: 800px) {
+  .article__titre {
+    font-size: 36px;
+  }
+}
 .article__lien {
   text-decoration: none;
   text-transform: lowercase;
   text-transform: capitalize;
-  color: black;
+  color: #000000;
 }
 
 .nom__client {
@@ -1001,7 +1019,21 @@ body {
   margin-top: 0;
   margin-bottom: 10px;
   padding-bottom: 3px;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #000000;
+}
+
+.bouton__realisations {
+  align-self: center;
+  background-color: #ffffff;
+  color: #000000;
+  text-decoration: none;
+  padding: 10px 20px;
+  width: 120px;
+  border: 0.5px solid #000000;
+  border-radius: 8px;
+  box-shadow: 2.2px 3px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 .realisations-container {
@@ -1015,19 +1047,19 @@ body {
   padding-top: 60px;
 }
 
-@media screen and (min-width: 800px) and (max-width: 2000px) {
+@media screen and (min-width: 800px) {
   .article__image {
     padding-bottom: 40px;
   }
 }
-@media screen and (min-width: 800px) and (max-width: 2000px) {
+@media screen and (min-width: 800px) {
   .realisations-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
     align-items: center;
   }
-  .article {
+  .article_realisations {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1044,88 +1076,52 @@ body {
     height: auto;
   }
 }
-.bouton__realisations {
-  align-self: center;
-  background-color: #ffffff;
-  color: black;
-  text-decoration: none;
-  padding: 10px 20px;
-  width: 120px;
-  border: 0.5px solid black;
-  border-radius: 8px;
-  box-shadow: 2.2px 3px rgba(0, 0, 0, 0.15);
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.image_haut_page {
+.single-realisation__image-haut-page {
   position: relative;
   display: inline-block;
   width: 100%;
   max-height: 400px;
   overflow: hidden;
 }
-
-.image_haut_page picture,
-.image_haut_page img {
+.single-realisation__image-haut-page img {
   width: 100%;
   height: auto;
   display: block;
 }
-
-.entete__sur__image {
+.single-realisation__entete-sur-image {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: black;
+  color: #000000;
   text-align: center;
 }
 
-.article__titre__single__realisation {
+.single-realisation__titre {
   font-family: "Judson", serif;
   font-size: clamp(32px, 3vw, 48px);
   font-weight: bold;
   margin-bottom: 0.2em;
-  text-transform: lowercase;
   text-transform: capitalize;
 }
-
-.client__single__realisation {
+.single-realisation__client {
   font-family: "Judson", serif;
   font-size: 32px;
   font-weight: bold;
   margin-top: 15px;
-  text-transform: lowercase;
   text-transform: capitalize;
 }
-
-.notre__mandat__realisation,
-.nos__realisations__realisation {
+.single-realisation__mandat, .single-realisation__realisations {
   font-family: "Judson", serif;
   font-size: 24px;
   font-weight: bold;
   text-align: center;
   color: #d47057;
 }
-
-.article__single__realisation p:not(.notre__mandat__realisation) {
-  font-family: "Abel", serif;
+.single-realisation__texte {
+  font-family: "Abel", sans-serif;
   font-size: 20px;
   text-align: center;
-}
-
-.carousel__controle {
-  background: none;
-  border: none;
-  font-size: 4rem;
-  color: #000000;
-  cursor: pointer;
-  transition: transform 0.2s ease;
-}
-
-.carousel__controle:hover {
-  transform: scale(1.2);
 }
 
 .carousel {
@@ -1134,23 +1130,57 @@ body {
   align-items: center;
   margin-top: 2em;
 }
+.carousel__controle {
+  background: none;
+  border: none;
+  font-size: 4rem;
+  color: #000000;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.carousel__controle:hover {
+  transform: scale(1.2);
+}
 
 .article__piedPage {
   text-align: center;
-  margin-top: 5em;
   margin-bottom: 2em;
-  color: 666666;
+  color: #666666;
+}
+
+.realisationsingle__navsequentielle {
+  width: 100%;
+  margin-left: 5px;
+  padding-top: 40px;
+  align-items: center;
+}
+.realisationsingle__navsequentielle__nav-button {
+  font-size: 18px;
+  gap: 0.5rem;
+  padding: 0.5rem 3rem;
+  font-family: "Judson", serif;
+  font-size: 16px;
+  color: rgb(0, 0, 0);
+  background-color: #ffffff;
+  border: 1px solid;
+  border-radius: 12px;
+  box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.215);
+  text-decoration: none;
+  margin-bottom: 65px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.realisationsingle__navsequentielle__nav-button:hover {
+  background-color: rgb(175, 175, 175);
+}
+.realisationsingle__navsequentielle__nav-button__prev-button {
+  text-align: left;
+}
+.realisationsingle__navsequentielle__nav-button__next-button {
+  margin-left: auto;
 }
 
 /** Mandat C - Équipe **/
-.menu-item a {
-  font-family: "DM Serif Text", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-/** Palette de couleurs **/
-/* Couleurs de base */
 .equipe__texte {
   display: none;
 }
@@ -1170,11 +1200,16 @@ body {
   margin: 20px;
 }
 
-.equipe_page {
+.equipe__page {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  background-image: url("../images/legumes_mobile.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center 50px;
 }
 
 .equipe__image img {
@@ -1184,39 +1219,37 @@ body {
   border-radius: 23px;
 }
 
-.equipe__titre {
+.equipe__infos__titre {
   font-family: "Judson", serif;
   font-size: 30px;
   text-decoration: none;
   width: 390px;
   border-bottom: 1px solid;
 }
-.equipe__titre a:link {
+.equipe__infos__titre a:link {
   text-decoration: none;
 }
-.equipe__titre a:visited {
+.equipe__infos__titre a:visited {
   text-decoration: none;
 }
-.equipe__titre a:hover {
+.equipe__infos__titre a:hover {
   text-decoration: none;
 }
-.equipe__titre a:active {
+.equipe__infos__titre a:active {
   text-decoration: none;
 }
-
-.equipe_titre_du_membre {
+.equipe__infos__titre_du_membre {
   font-family: "Judson", serif;
   font-size: 28px;
   color: #d47057;
   margin: 20px;
 }
-.equipe_titre_du_membre__svg__fleche {
-  width: 24px;
-  height: 24px;
-  fill: black;
+.equipe__infos__titre_du_membre__link {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
 }
-
-.equipe_ensavoirplus__bouton {
+.equipe__infos__titre_du_membre__ensavoirplus__bouton {
   gap: 0.5rem;
   padding: 0.5rem 3rem;
   font-family: "Judson", serif;
@@ -1229,29 +1262,32 @@ body {
   text-decoration: none;
   margin-bottom: 65px;
 }
-.equipe_ensavoirplus__bouton a:link {
+.equipe__infos__titre_du_membre__ensavoirplus__bouton a:link {
   text-decoration: none;
 }
-.equipe_ensavoirplus__bouton a:visited {
+.equipe__infos__titre_du_membre__ensavoirplus__bouton a:visited {
   text-decoration: none;
 }
-.equipe_ensavoirplus__bouton a:hover {
+.equipe__infos__titre_du_membre__ensavoirplus__bouton a:hover {
   text-decoration: none;
 }
-.equipe_ensavoirplus__bouton a:active {
+.equipe__infos__titre_du_membre__ensavoirplus__bouton a:active {
   text-decoration: none;
   display: flex;
   flex-direction: column;
 }
-.equipe_ensavoirplus__bouton .equipe__hautdepage {
-  font-family: "Abel", sans-serif;
-  font-size: 22px;
+.equipe__infos .svg__fleche {
+  fill: black;
 }
 
 @media (min-width: 768px) {
-  .equipe_imgequipe figure {
-    margin: 0;
-    padding: 0;
+  .equipe__page {
+    background-image: url("../images/legumes_table.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 50px;
+    background-attachment: fixed;
+    width: 100%;
   }
   .equipe__h1 {
     font-size: 96px;
@@ -1268,54 +1304,48 @@ body {
     margin-left: 2em;
     margin-right: 2em;
   }
-  .equipe_titre_du_membre {
+  .equipe__image {
+    margin-bottom: 6em;
+  }
+  .equipe__infos__titre_du_membre {
     margin-left: 0;
+  }
+  .equipe__infos__image {
+    margin-bottom: 6em;
   }
   .equipe:nth-of-type(2) {
     flex-direction: row-reverse;
   }
-  .equipe__image {
-    margin-bottom: 6em;
-  }
-  .equipe__hautdepage {
-    font-family: "Abel", sans-serif;
-    font-size: 24px;
-  }
 }
-.equipe__author {
+.equipesingle {
+  background-color: #fff8de;
+  background-image: url("../images/legumes_table.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 50px;
+  background-attachment: fixed;
+  width: 100%;
+}
+.equipesingle__piedPage__author {
+  display: none;
+}
+.equipesingle__piedPage__date {
   display: none;
 }
 
-.equipe__date {
-  display: none;
+.equipesinglearticle__titre {
+  font-size: 55px;
+  text-align: center;
+  margin: auto;
+  max-width: 80vw;
+  padding: 20px;
 }
 
 .equipesingle__image img {
-  padding-left: 8px;
   width: 100%;
   height: 100%;
   object-fit: contain;
   border-radius: 23px;
-}
-
-.equipesingle__titre {
-  font-family: "Judson", serif;
-  font-size: 30px;
-  text-decoration: none;
-  width: 390px;
-  border-bottom: 1px solid;
-}
-.equipesingle__titre a:link {
-  text-decoration: none;
-}
-.equipesingle__titre a:visited {
-  text-decoration: none;
-}
-.equipesingle__titre a:hover {
-  text-decoration: none;
-}
-.equipesingle__titre a:active {
-  text-decoration: none;
 }
 
 .equipesingle__infos {
@@ -1324,12 +1354,29 @@ body {
   align-items: center;
   text-align: center;
   gap: 0px;
-  margin-bottom: 5em;
+}
+.equipesingle__infos__titre {
+  font-family: "Judson", serif;
+  font-size: 30px;
+  text-decoration: none;
+  width: 390px;
+  border-bottom: 1px solid;
+}
+.equipesingle__infos__titre a:link {
+  text-decoration: none;
+}
+.equipesingle__infos__titre a:visited {
+  text-decoration: none;
+}
+.equipesingle__infos__titre a:hover {
+  text-decoration: none;
+}
+.equipesingle__infos__titre a:active {
+  text-decoration: none;
 }
 
 .equipesingle__navsequentielle {
   width: 100%;
-  margin-left: 5px;
 }
 .equipesingle__navsequentielle__nav-button {
   font-size: 18px;
@@ -1358,18 +1405,27 @@ body {
 }
 
 @media (min-width: 768px) {
-  .article {
+  .equipesingle {
+    background-color: #fff8de;
+    background-image: url("../images/legumes_table.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 50px;
+    background-attachment: fixed;
+    width: 100%;
+  }
+  .equipesingle__article {
     display: flex;
     margin: auto;
     max-width: 80vw;
     flex-wrap: wrap;
   }
-  .equipesinglearticle__titre {
-    font-size: 20px;
-    margin-bottom: 20px;
-    padding-top: 10px;
-    font-family: "Judson", serif;
-    text-align: center;
+  .equipesingle__titre {
+    font-size: 80px;
+    text-align: left;
+    margin: auto;
+    max-width: 80vw;
+    padding: 20px;
   }
   .equipesingle__image figure {
     margin: 0;
@@ -1384,18 +1440,12 @@ body {
     margin-bottom: 6em;
     height: auto;
   }
-  .equipesinglearticle__titre {
-    font-size: 80px;
-    text-align: left;
-    margin: auto;
-    max-width: 80vw;
-    padding: 20px;
-  }
   .equipesingle__infos {
     display: flex;
     align-items: flex-start;
     text-align: left;
     margin-bottom: 6em;
+    padding-left: 20px;
     width: 50%;
   }
 }
@@ -1517,7 +1567,6 @@ body {
 /** article WP **/
 .article {
   padding-right: 8px;
-  margin-bottom: 10px;
 }
 /** MenuWP **/
 /**
@@ -1642,6 +1691,7 @@ body {
 .posts-navigation .nav-previous,
 .post-navigation .nav-previous {
   flex: 1 0 50%;
+  text-align: left;
 }
 
 .nav-next,
